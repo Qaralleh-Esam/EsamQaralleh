@@ -15,6 +15,19 @@
         h2 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
         .back-btn { display: inline-block; margin-bottom: 15px; color: var(--primary); font-weight: bold; text-decoration: none; }
         footer { text-align: center; padding: 20px; color: var(--secondary); font-size: 0.85rem; margin-top: 40px; }
+        
+        /* Table Styling */
+        .docs-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.95rem; }
+        .docs-table th { background-color: var(--primary); color: white; text-align: left; padding: 12px 14px; font-weight: 600; border: 1px solid #002244; }
+        .docs-table td { padding: 12px 14px; border: 1px solid #e2e8f0; vertical-align: top; }
+        .docs-table tr:nth-child(even) { background-color: #f8fafc; }
+        .docs-table tr:hover { background-color: #f1f5f9; }
+        .docs-table a { color: #003366; font-weight: bold; text-decoration: none; }
+        .docs-table a:hover { text-decoration: underline; color: #1a5276; }
+        
+        /* Collapsible Details */
+        details summary::-webkit-details-marker { color: #003366; }
+        details[open] summary { border-bottom: 1px solid #cbd5e1; padding-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -45,36 +58,77 @@
             <li>Pulse-Width Modulation (PWM), H-bridge motor drivers, and sensor integration.</li>
         </ul>
 
-        <h2>Supplementary Documents & Practical Manual</h2>
-        <p>Access practical lab manuals, guides, and supplementary technical documentation for hands-on embedded systems design:</p>
-        <ul style="list-style-type: none; padding-left: 0;">
-            <li style="margin-bottom: 12px; padding: 12px 16px; background: #f1f5f9; border-left: 4px solid #003366; border-radius: 4px;">
-                <strong><a href="https://drive.google.com/open?id=10NROWpkzXPARkmkWP0YWUIjp30sXyrLl" target="_blank" style="color: #003366; text-decoration: none;">📄 Interfacing Displays and Input Devices</a></strong>
-                <br><span style="font-size: 0.9rem; color: #4a5568;">Comprehensive guide to 7-segment displays, matrix keypads, current-limiting, and multiplexing.</span>
-            </li>
-            <li style="margin-bottom: 12px; padding: 12px 16px; background: #f1f5f9; border-left: 4px solid #003366; border-radius: 4px;">
-                <strong><a href="https://drive.google.com/open?id=1T-mIPUadpGmqWVE8Gs7NSJT2rF7gZPhI" target="_blank" style="color: #003366; text-decoration: none;">📄 Pulse Width Modulation (PWM) and Its Applications</a></strong>
-                <br><span style="font-size: 0.9rem; color: #4a5568;">Guide to PWM generation, duty cycle calculations, and effective voltage control using PIC microcontrollers.</span>
-            </li>
-            <li style="margin-bottom: 12px; padding: 12px 16px; background: #f1f5f9; border-left: 4px solid #003366; border-radius: 4px;">
-                <strong><a href="https://drive.google.com/open?id=1oa4c5NGwgoYEtn4nj9DU8m5c4Rxd1yrU" target="_blank" style="color: #003366; text-decoration: none;">📄 DC Motors and Motor Drive Circuits</a></strong>
-                <br><span style="font-size: 0.9rem; color: #4a5568;">Principles of DC motor operation, H-bridge drivers, torque/current specs, and microcontroller interfacing.</span>
-            </li>
-            <li style="margin-bottom: 12px; padding: 12px 16px; background: #f1f5f9; border-left: 4px solid #003366; border-radius: 4px;">
-                <strong><a href="https://drive.google.com/open?id=15Rubu7cTF5Q5aESEPtRnRRB3xQ9aU5l_" target="_blank" style="color: #003366; text-decoration: none;">📄 Servo Motor Control Using PIC16F877</a></strong>
-                <br><span style="font-size: 0.9rem; color: #4a5568;">Guide to PWM-based servo positioning, 50 Hz control signals, SG90/MG996R specs, and power decoupling.</span>
-            </li>
-            <li style="margin-bottom: 12px; padding: 12px 16px; background: #f1f5f9; border-left: 4px solid #003366; border-radius: 4px;">
-                <strong><a href="https://drive.google.com/open?id=12hdbTKNZTZuR6mfGgu3j-Bj6Qu4DPXxx" target="_blank" style="color: #003366; text-decoration: none;">📄 HC-SR04 Ultrasonic Sensor: Principles and Applications</a></strong>
-                <br><span style="font-size: 0.9rem; color: #4a5568;">Time-of-flight distance measurement, trigger/echo timing analysis, and PIC microcontroller interfacing.</span>
-            </li>
-        </ul>
-        <p style="margin-top: 15px;">
-            <a href="https://drive.google.com/drive/folders/1O5dlMg_ADdRxGaOtmUbq1sXTURkYWlfr?usp=sharing" target="_blank" style="color: #003366; font-weight: bold; text-decoration: underline;">📂 View All Practical Manual Documents on Google Drive &rarr;</a>
-        </p>
-
         <h2>Project-Based Learning</h2>
         <p>Employs hands-on hardware design projects where students design, build, and test complete microcontroller-based system solutions for practical engineering applications.</p>
+
+        <!-- Collapsible Section: Supplementary Documents Table -->
+        <details open style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; margin: 25px 0; padding: 16px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+            <summary style="font-size: 1.25rem; font-weight: bold; color: #003366; cursor: pointer; outline: none;">
+                📁 Supplementary Documents & Practical Manuals
+                <span style="font-size: 0.85rem; color: #64748b; font-weight: normal; margin-left: 10px;">(Click to expand / collapse)</span>
+            </summary>
+            <div style="margin-top: 15px; padding-top: 10px;">
+                <p>Access practical lab manuals, slides, and supplementary technical documentation for hands-on embedded systems design:</p>
+                
+                <table class="docs-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 40%;">Document Title / Topic</th>
+                            <th style="width: 60%;">Description & Key Concepts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=10NROWpkzXPARkmkWP0YWUIjp30sXyrLl" target="_blank">📄 Interfacing Displays & Input Devices</a>
+                            </td>
+                            <td>Comprehensive guide covering 7-segment LED displays, matrix keypads, current-limiting resistors, and display multiplexing techniques.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=1T-mIPUadpGmqWVE8Gs7NSJT2rF7gZPhI" target="_blank">📄 Pulse Width Modulation (PWM) & Applications</a>
+                            </td>
+                            <td>Guide on PWM signal generation, duty cycle calculations, frequency scaling, and effective voltage control using PIC microcontrollers.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=1oa4c5NGwgoYEtn4nj9DU8m5c4Rxd1yrU" target="_blank">📄 DC Motors & Motor Drive Circuits</a>
+                            </td>
+                            <td>Principles of DC motor operation, H-bridge motor driver configurations, torque/current specifications, and microcontroller interfacing.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=15Rubu7cTF5Q5aESEPtRnRRB3xQ9aU5l_" target="_blank">📄 Servo Motor Control Using PIC16F877</a>
+                            </td>
+                            <td>PWM-based servo positioning, 50 Hz control signals, SG90 vs. MG996R motor specifications, and power decoupling circuit design.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=12hdbTKNZTZuR6mfGgu3j-Bj6Qu4DPXxx" target="_blank">📄 HC-SR04 Ultrasonic Sensor: Principles & Applications</a>
+                            </td>
+                            <td>Time-of-flight distance measurement, trigger/echo pulse timing analysis, and PIC microcontroller hardware interfacing.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+        <!-- Collapsible Section: Previous Class Projects -->
+        <details style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; margin: 25px 0; padding: 16px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+            <summary style="font-size: 1.25rem; font-weight: bold; color: #003366; cursor: pointer; outline: none;">
+                🎓 Previous Class Projects & Student Repositories
+                <span style="font-size: 0.85rem; color: #64748b; font-weight: normal; margin-left: 10px;">(Click to expand / collapse)</span>
+            </summary>
+            <div style="margin-top: 15px; padding-top: 10px;">
+                <p>Explore archived student projects, hardware prototypes, and repository links from previous semesters:</p>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li style="margin-bottom: 8px;"><strong>Automated Smart Home & Climate Controller:</strong> Microcontroller-based HVAC and lighting system utilizing sensor feedback loops.</li>
+                    <li style="margin-bottom: 8px;"><strong>Obstacle Avoidance Autonomous Rover:</strong> Integrated DC motor control, PWM drive, and ultrasonic sensor collision detection.</li>
+                    <li style="margin-bottom: 8px;"><strong>Real-Time Digital Pulse Oximeter & Monitor:</strong> Hardware signal filtering, ADC sampling, and display output.</li>
+                    <li style="margin-bottom: 8px;"><strong>Industrial Speed & Position Servo Control:</strong> Closed-loop feedback system implemented on PIC16F series controllers.</li>
+                </ul>
+            </div>
+        </details>
     </div>
 </div>
 
