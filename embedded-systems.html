@@ -15,8 +15,25 @@
         h2 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
         .back-btn { display: inline-block; margin-bottom: 15px; color: var(--primary); font-weight: bold; text-decoration: none; }
         footer { text-align: center; padding: 20px; color: var(--secondary); font-size: 0.85rem; margin-top: 40px; }
+        
+        /* Table Styling */
+        .chapters-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.95rem; }
+        .chapters-table th { background-color: var(--primary); color: white; text-align: left; padding: 12px 14px; font-weight: 600; border: 1px solid #002244; }
+        .chapters-table td { padding: 12px 14px; border: 1px solid #e2e8f0; vertical-align: top; }
+        .chapters-table tr:nth-child(even) { background-color: #f8fafc; }
+        .chapters-table tr:hover { background-color: #f1f5f9; }
+        .chapters-table a { color: #003366; font-weight: bold; text-decoration: none; }
+        .chapters-table a:hover { text-decoration: underline; color: #1a5276; }
+
+        /* Collapsible Styling */
         details summary::-webkit-details-marker { color: #003366; }
         details[open] summary { border-bottom: 1px solid #cbd5e1; padding-bottom: 10px; }
+        
+        /* Sub-collapsible for projects */
+        .project-item { margin-bottom: 10px; border: 1px solid #e2e8f0; border-radius: 6px; background: #ffffff; }
+        .project-item summary { font-weight: 600; color: #003366; padding: 10px 14px; cursor: pointer; }
+        .project-item summary:hover { background: #f1f5f9; }
+        .project-content { padding: 12px 16px; font-size: 0.92rem; color: #334155; border-top: 1px solid #e2e8f0; }
     </style>
 </head>
 <body>
@@ -50,54 +67,118 @@
         <h2>Project-Based Learning</h2>
         <p>Employs hands-on hardware design projects where students design, build, and test complete microcontroller-based system solutions for practical engineering applications.</p>
 
-        <details style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; margin: 25px 0; padding: 14px 18px;">
+        <!-- Collapsible Section: Course Chapters & Textbook Modules Table -->
+        <details open style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; margin: 25px 0; padding: 14px 18px;">
             <summary style="font-size: 1.25rem; font-weight: bold; color: #003366; cursor: pointer; outline: none;">
-                📁 Supplementary Documents & Practical Manuals
+                📚 Course Chapters & Textbook Modules
                 <span style="font-size: 0.85rem; color: #64748b; font-weight: normal; margin-left: 10px;">(Click to expand / collapse)</span>
             </summary>
             <div style="margin-top: 15px; padding-top: 10px;">
-                <p>Access practical lab manuals, guides, and supplementary technical documentation for hands-on embedded systems design:</p>
-                <ul style="list-style-type: none; padding-left: 0;">
-                    <li style="margin-bottom: 12px; padding: 12px 16px; background: #ffffff; border-left: 4px solid #003366; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                        <strong><a href="https://drive.google.com/open?id=10NROWpkzXPARkmkWP0YWUIjp30sXyrLl" target="_blank" style="color: #003366; text-decoration: none;">📄 Interfacing Displays and Input Devices</a></strong>
-                        <br><span style="font-size: 0.9rem; color: #4a5568;">Comprehensive guide to 7-segment displays, matrix keypads, current-limiting, and multiplexing.</span>
-                    </li>
-                    <li style="margin-bottom: 12px; padding: 12px 16px; background: #ffffff; border-left: 4px solid #003366; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                        <strong><a href="https://drive.google.com/open?id=1T-mIPUadpGmqWVE8Gs7NSJT2rF7gZPhI" target="_blank" style="color: #003366; text-decoration: none;">📄 Pulse Width Modulation (PWM) and Its Applications</a></strong>
-                        <br><span style="font-size: 0.9rem; color: #4a5568;">Guide to PWM generation, duty cycle calculations, and effective voltage control using PIC microcontrollers.</span>
-                    </li>
-                    <li style="margin-bottom: 12px; padding: 12px 16px; background: #ffffff; border-left: 4px solid #003366; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                        <strong><a href="https://drive.google.com/open?id=1oa4c5NGwgoYEtn4nj9DU8m5c4Rxd1yrU" target="_blank" style="color: #003366; text-decoration: none;">📄 DC Motors and Motor Drive Circuits</a></strong>
-                        <br><span style="font-size: 0.9rem; color: #4a5568;">Principles of DC motor operation, H-bridge drivers, torque/current specs, and microcontroller interfacing.</span>
-                    </li>
-                    <li style="margin-bottom: 12px; padding: 12px 16px; background: #ffffff; border-left: 4px solid #003366; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                        <strong><a href="https://drive.google.com/open?id=15Rubu7cTF5Q5aESEPtRnRRB3xQ9aU5l_" target="_blank" style="color: #003366; text-decoration: none;">📄 Servo Motor Control Using PIC16F877</a></strong>
-                        <br><span style="font-size: 0.9rem; color: #4a5568;">Guide to PWM-based servo positioning, 50 Hz control signals, SG90/MG996R specs, and power decoupling.</span>
-                    </li>
-                    <li style="margin-bottom: 12px; padding: 12px 16px; background: #ffffff; border-left: 4px solid #003366; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                        <strong><a href="https://drive.google.com/open?id=12hdbTKNZTZuR6mfGgu3j-Bj6Qu4DPXxx" target="_blank" style="color: #003366; text-decoration: none;">📄 HC-SR04 Ultrasonic Sensor: Principles and Applications</a></strong>
-                        <br><span style="font-size: 0.9rem; color: #4a5568;">Time-of-flight distance measurement, trigger/echo timing analysis, and PIC microcontroller interfacing.</span>
-                    </li>
-                </ul>
-                <p style="margin-top: 15px;">
-                    <a href="https://drive.google.com/drive/folders/1O5dlMg_ADdRxGaOtmUbq1sXTURkYWlfr?usp=sharing" target="_blank" style="color: #003366; font-weight: bold; text-decoration: underline;">📂 View All Practical Manual Documents on Google Drive &rarr;</a>
+                <p>Access textbook chapters, lab manuals, and course modules hosted on Google Drive:</p>
+                
+                <table class="chapters-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 40%;">Document Name / Chapter Link</th>
+                            <th style="width: 60%;">Book & Chapter Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/drive/folders/1O5dlMg_ADdRxGaOtmUbq1sXTURkYWlfr?usp=drive_link" target="_blank">📖 Chapter 1: Microcontroller Fundamentals & PIC Architecture</a>
+                            </td>
+                            <td>Introduces core embedded system principles, PIC16F microcontroller internal architecture, Harvard memory layout, CPU registers, clocking, and assembly/C program execution environment.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=10NROWpkzXPARkmkWP0YWUIjp30sXyrLl" target="_blank">📖 Chapter 2: Interfacing Displays and Input Devices</a>
+                            </td>
+                            <td>Details parallel I/O port programming, switch debouncing techniques, 7-segment LED multiplexing, matrix keypad decoding, and LCD display driving.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=1T-mIPUadpGmqWVE8Gs7NSJT2rF7gZPhI" target="_blank">📖 Chapter 3: Pulse Width Modulation (PWM) & Applications</a>
+                            </td>
+                            <td>Explores hardware PWM signal generation, frequency scaling, duty cycle mathematical modeling, and precise voltage/speed control in embedded systems.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=1oa4c5NGwgoYEtn4nj9DU8m5c4Rxd1yrU" target="_blank">📖 Chapter 4: DC Motors & Motor Drive Circuits</a>
+                            </td>
+                            <td>Covers electromechanical principles of DC motors, H-bridge driver configurations (L298/L293D), back-EMF protection, and bidirectional motor speed/torque control.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=15Rubu7cTF5Q5aESEPtRnRRB3xQ9aU5l_" target="_blank">📖 Chapter 5: Servo Motor Control Using PIC16F877</a>
+                            </td>
+                            <td>Focuses on precision position control using 50 Hz PWM control signals, SG90 and MG996R servo timing specifications, and power supply decoupling circuit design.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://drive.google.com/open?id=12hdbTKNZTZuR6mfGgu3j-Bj6Qu4DPXxx" target="_blank">📖 Chapter 6: HC-SR04 Ultrasonic Sensor & Distance Measurement</a>
+                            </td>
+                            <td>Analyzes acoustic time-of-flight distance calculation, trigger pulse timing, echo pulse duration measurement using timers, and real-time obstacle detection interfacing.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p style="margin-top: 18px; text-align: right;">
+                    <a href="https://drive.google.com/drive/folders/1O5dlMg_ADdRxGaOtmUbq1sXTURkYWlfr?usp=drive_link" target="_blank" style="color: #003366; font-weight: bold; text-decoration: underline;">📂 Open Complete Google Drive Folder &rarr;</a>
                 </p>
             </div>
         </details>
 
+        <!-- Collapsible Section: Previous Class Projects & Student Repositories -->
         <details style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; margin: 25px 0; padding: 14px 18px;">
             <summary style="font-size: 1.25rem; font-weight: bold; color: #003366; cursor: pointer; outline: none;">
                 🎓 Previous Class Projects & Student Repositories
                 <span style="font-size: 0.85rem; color: #64748b; font-weight: normal; margin-left: 10px;">(Click to expand / collapse)</span>
             </summary>
             <div style="margin-top: 15px; padding-top: 10px;">
-                <p>Explore archived student projects, hardware prototypes, and repository links from previous semesters:</p>
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li style="margin-bottom: 8px;"><strong>Automated Smart Home & Climate Controller:</strong> Microcontroller-based HVAC and lighting system utilizing sensor feedback loops.</li>
-                    <li style="margin-bottom: 8px;"><strong>Obstacle Avoidance Autonomous Rover:</strong> Integrated DC motor control, PWM drive, and ultrasonic sensor collision detection.</li>
-                    <li style="margin-bottom: 8px;"><strong>Real-Time Digital Pulse Oximeter & Monitor:</strong> Hardware signal filtering, ADC sampling, and display output.</li>
-                    <li style="margin-bottom: 8px;"><strong>Industrial Speed & Position Servo Control:</strong> Closed-loop feedback system implemented on PIC16F series controllers.</li>
-                </ul>
+                <p>Click on any student project below to view its system architecture and technical summary:</p>
+                
+                <details class="project-item">
+                    <summary>🏠 Automated Smart Home & Climate Controller</summary>
+                    <div class="project-content">
+                        Microcontroller-based HVAC and lighting system utilizing closed-loop sensor feedback (temperature/humidity), relay actuator control, and LCD status indication.
+                    </div>
+                </details>
+
+                <details class="project-item">
+                    <summary>🤖 Obstacle Avoidance Autonomous Rover</summary>
+                    <div class="project-content">
+                        Mobile robotic vehicle integrating H-Bridge DC motor drive, PWM speed modulation, and HC-SR04 ultrasonic sensors for real-time obstacle sensing and trajectory correction.
+                    </div>
+                </details>
+
+                <details class="project-item">
+                    <summary>🫀 Real-Time Digital Pulse Oximeter & Monitor</summary>
+                    <div class="project-content">
+                        Biomedical non-invasive photoplethysmography (PPG) system featuring hardware active filtering, analog-to-digital sampling, and real-time pulse rate calculation.
+                    </div>
+                </details>
+
+                <details class="project-item">
+                    <summary>⚙️ Industrial Speed & Position Servo Control</summary>
+                    <div class="project-content">
+                        Closed-loop PID angular positioning and velocity feedback system implemented on PIC16F microcontrollers with optical rotary encoder feedback.
+                    </div>
+                </details>
+
+                <details class="project-item">
+                    <summary>🚦 Smart Traffic Intersection & Emergency Controller</summary>
+                    <div class="project-content">
+                        Intelligent multi-lane traffic light controller featuring multiplexed 7-segment countdown displays, pedestrian crosswalk interrupts, and emergency override logic.
+                    </div>
+                </details>
+
+                <details class="project-item">
+                    <summary>🌡️ Microcontroller-Based Multi-Sensor Station</summary>
+                    <div class="project-content">
+                        Multi-channel environmental data acquisition logger recording ambient temperature, barometric pressure, and ambient light using internal ADC channels with UART telemetry output.
+                    </div>
+                </details>
             </div>
         </details>
     </div>
@@ -109,4 +190,3 @@
 
 </body>
 </html>
-```[cite: 16]
