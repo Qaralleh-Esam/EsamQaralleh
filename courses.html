@@ -1,122 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses Taught | Prof. Dr. Esam AlQaralleh</title>
-    <style>
-        :root { --primary: #003366; --secondary: #4a5568; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-        header { background-color: var(--primary); color: white; padding: 1.5rem 0; text-align: center; }
-        nav { background: #002244; display: flex; justify-content: center; gap: 20px; padding: 12px; }
-        nav a { color: white; text-decoration: none; font-weight: 600; padding: 6px 16px; border-radius: 4px; transition: 0.3s; }
-        nav a:hover, nav a.active { background: #1a5276; }
-        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
-        .section-header { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 30px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
-        .card { background: var(--card); padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 4px solid var(--primary); display: flex; flex-direction: column; justify-content: space-between; }
-        .card.prev { border-left-color: var(--secondary); }
-        .card h3 { margin-top: 0; color: var(--primary); font-size: 1.2rem; }
-        .card.prev h3 { color: var(--secondary); }
-        .card p { font-size: 0.9rem; color: var(--secondary); margin-bottom: 15px; }
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 8px 14px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.85rem; text-align: center; }
-        .btn:hover { background: #1a5276; }
-        footer { text-align: center; padding: 20px; color: var(--secondary); font-size: 0.85rem; margin-top: 40px; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching | Prof. Esam A. Al-Qaralleh</title>
+<meta name="description" content="Courses taught by Prof. Esam A. Al-Qaralleh at PSUT: embedded systems, digital logic, microprocessors, computer architecture, machine learning and more.">
+<meta name="author" content="Esam A. Al-Qaralleh">
+<meta name="theme-color" content="#13294b">
+<meta property="og:title" content="Teaching | Prof. Esam A. Al-Qaralleh">
+<meta property="og:description" content="Courses taught by Prof. Esam A. Al-Qaralleh at PSUT: embedded systems, digital logic, microprocessors, computer architecture, machine learning and more.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <h1>Teaching Portfolio & Courses</h1>
-    <p>Prof. Dr. Esam Atallah Al-Qaralleh</p>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main navigation">
+    <a class="brand" href="index.html"><span class="brand-name">Esam A. Al-Qaralleh</span><span class="brand-sub">Computer Engineering · PSUT</span></a>
+    <ul class="nav-links"><li><a href="index.html">About</a></li><li><a href="courses.html" aria-current="page">Teaching</a></li><li><a href="publications.html">Publications</a></li><li><a class="ext" href="https://scholar.google.com/citations?user=n0OVcFgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li></ul>
+  </nav>
 </header>
+<main id="main">
 
-<nav>
-    <a href="index.html">Bio & Home</a>
-    <a href="courses.html" class="active">Courses Taught</a>
-    <a href="publications.html">Publications</a>
-    <a href="https://scholar.google.com/citations?user=n(0OVcFgAAAAJ&hl=en" target="_blank">Google Scholar</a>
-</nav>
-
-<div class="container">
-
-    <h2 class="section-header">Recently Taught Courses</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Embedded Systems</h3>
-            <p>Microcontroller architecture, I/O interfacing, timers, interrupts, ADC, motor control, and project-based design.</p>
-            <a href="embedded-systems.html" class="btn">View Course Details &rarr;</a>
-        </div>
-
-        <div class="card">
-            <h3>Digital Logic Design & Lab</h3>
-            <p>Number systems, Boolean algebra, combinational & sequential logic design, and hardware prototyping.</p>
-            <a href="digital-logic.html" class="btn">View Course Details &rarr;</a>
-        </div>
-
-        <div class="card">
-            <h3>Microprocessors & Assembly Language</h3>
-            <p>8086/PIC microprocessors, hardware interfacing, assembly programming, and hands-on term projects.</p>
-            <a href="microprocessors.html" class="btn">View Course Details &rarr;</a>
-        </div>
-
-        <div class="card">
-            <h3>Computer Organization & Assembly Language for IT Students</h3>
-            <p>Computer structure, instruction sets, assembly programming, memory hierarchy, and basic CPU design for IT majors.</p>
-            <a href="computer-organization-it.html" class="btn">View Course Details &rarr;</a>
-        </div>
-
-        <div class="card">
-            <h3>Machine Learning</h3>
-            <p>Neural networks, deep learning, classification models, computer vision applications, and edge AI deployment.</p>
-            <a href="ai-machine-learning.html" class="btn">View Course Details &rarr;</a>
-        </div>
-    </div>
-
-    <h2 class="section-header">Previously Taught Courses</h2>
-    <div class="grid">
-        <div class="card prev">
-            <h3>Computer Architecture & Organization</h3>
-            <p>Processor organization, instruction sets, memory hierarchy, pipelining, Verilog HDL, and FPGA verification.</p>
-            <a href="computer-architecture.html" class="btn">View Course Details &rarr;</a>
-        </div>
-
-        <div class="card prev">
-            <h3>Multicore Computing</h3>
-            <p>Parallel architectures, thread-level parallelism, shared-memory systems, OpenMP, and hardware acceleration.</p>
-            <a href="multicore-computing.html" class="btn">View Course Details &rarr;</a>
-        </div>
-
-        <div class="card prev">
-            <h3>Parallel & Distributed Computing</h3>
-            <p>Distributed system models, cluster computing, parallel algorithm design, message passing (MPI), and performance scaling.</p>
-            <a href="parallel-computing.html" class="btn">View Course Details &rarr;</a>
-        </div>
-
-        <div class="card prev">
-            <h3>Computer Operating Systems</h3>
-            <p>Process management, concurrency, synchronization, deadlocks, memory management, and file systems.</p>
-            <a href="operating-systems.html" class="btn">View Course Details &rarr;</a>
-        </div>
-
-        <div class="card prev">
-            <h3>Internet of Things (IoT)</h3>
-            <p>Embedded sensors, wireless communication protocols, edge node deployment, and cloud-connected systems.</p>
-            <a href="iot.html" class="btn">View Course Details &rarr;</a>
-        </div>
-
-        <div class="card prev">
-            <h3>Advanced Digital Design</h3>
-            <p>Verilog HDL modeling, state machine synthesis, FPGA acceleration, and hardware-software co-design.</p>
-            <a href="advanced-digital-design.html" class="btn">View Course Details &rarr;</a>
-        </div>
-    </div>
-
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a><span>/</span>Teaching</div>
+  <span class="eyebrow">Teaching Portfolio</span>
+  <h1>Courses &amp; Teaching</h1>
+  <p class="lede">Over twenty years of undergraduate and graduate teaching in computer and electrical engineering, with an emphasis on hands-on, project-based learning.</p>
+</div></section>
+<div class="wrap">
+  <section class="section section-grid">
+    <h2 class="section-title">Recently Taught</h2>
+    <ul class="course-list"><li class="course"><a href="embedded-systems.html"><div><h3>Embedded Systems<span class="badge">Slides &amp; projects</span></h3><p>Microcontroller architecture, I/O interfacing, timers, interrupts, ADC, motor control, and project-based design.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="digital-logic.html"><div><h3>Digital Logic Design &amp; Lab</h3><p>Number systems, Boolean algebra, combinational &amp; sequential logic design, and hardware prototyping.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="microprocessors.html"><div><h3>Microprocessors &amp; Assembly Language</h3><p>8086/PIC microprocessors, hardware interfacing, assembly programming, and hands-on term projects.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="computer-organization-it.html"><div><h3>Computer Organization &amp; Assembly Language for IT</h3><p>Computer structure, instruction sets, assembly programming, memory hierarchy, and basic CPU design for IT majors.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="ai-machine-learning.html"><div><h3>Machine Learning</h3><p>Neural networks, deep learning, classification models, computer vision applications, and edge AI deployment.</p></div><span class="go">Course page &rarr;</span></a></li></ul>
+  </section>
+  <section class="section section-grid">
+    <h2 class="section-title">Previously Taught</h2>
+    <ul class="course-list"><li class="course"><a href="computer-architecture.html"><div><h3>Computer Architecture &amp; Organization</h3><p>Processor organization, instruction sets, memory hierarchy, pipelining, Verilog HDL, and FPGA verification.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="advanced-computer-architecture.html"><div><h3>Advanced Computer Architecture</h3><p>Advanced processor architectures, parallelism, memory systems and architectural performance.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="multicore-computing.html"><div><h3>Multicore Computing</h3><p>Parallel architectures, thread-level parallelism, shared-memory systems, OpenMP, and hardware acceleration.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><div><div><h3>Parallel &amp; Distributed Computing</h3><p>Distributed system models, cluster computing, parallel algorithm design, message passing (MPI), and performance scaling.</p></div></div></li><li class="course"><a href="operating-systems.html"><div><h3>Computer Operating Systems</h3><p>Process management, concurrency, synchronization, deadlocks, memory management, and file systems.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="computer-arithmetic.html"><div><h3>Computer Arithmetic</h3><p>Number representation, adders and multipliers, arithmetic algorithms and hardware optimization.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><div><div><h3>Internet of Things (IoT)</h3><p>Embedded sensors, wireless communication protocols, edge node deployment, and cloud-connected systems.</p></div></div></li><li class="course"><div><div><h3>Advanced Digital Design</h3><p>Verilog HDL modeling, state machine synthesis, FPGA acceleration, and hardware-software co-design.</p></div></div></li><li class="course"><a href="electric-circuits.html"><div><h3>Electric Circuits</h3><p>Circuit laws, network analysis and circuit theorems for electrical networks.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="electronics.html"><div><h3>Electronics &amp; Digital Electronics</h3><p>Electronic devices and circuits, and digital electronic building blocks.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="workshop-lab.html"><div><h3>Workshop Lab &amp; Engineering Design</h3><p>Project-based design thinking, prototyping, testing and teamwork.</p></div><span class="go">Course page &rarr;</span></a></li><li class="course"><a href="practical-training.html"><div><h3>Practical Training / Work Placement</h3><p>Supervised workplace experience with training plans, progress reports and reflective assessment.</p></div><span class="go">Course page &rarr;</span></a></li></ul>
+  </section>
 </div>
 
-<footer>
-    &copy; Prof. Dr. Esam Atallah Al-Qaralleh — Princess Sumaya University for Technology
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h4>Prof. Esam A. Al-Qaralleh, Ph.D.</h4>
+      <p>Professor of Computer Engineering</p>
+      <p>King Abdullah II School of Engineering</p>
+      <p>Princess Sumaya University for Technology, Amman, Jordan</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul><li><a href="mailto:qaralleh@psut.edu.jo">qaralleh@psut.edu.jo</a></li><li><a href="tel:+962775624636">(+962) 775 624 636</a></li></ul>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul><li><a href="courses.html">Teaching</a></li><li><a href="publications.html">Publications</a></li><li><a href="https://scholar.google.com/citations?user=n0OVcFgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li></ul>
+    </div>
+  </div>
+  <div class="copy"><div class="wrap"><span>&copy; 2026 Esam A. Al-Qaralleh</span><span>Princess Sumaya University for Technology</span></div></div>
 </footer>
-
 </body>
 </html>

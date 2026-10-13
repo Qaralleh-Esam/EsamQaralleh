@@ -1,87 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Dr. Esam AlQaralleh | Academic Homepage</title>
-    <style>
-        :root { --primary: #003366; --secondary: #4a5568; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-        header { background-color: var(--primary); color: white; padding: 1.5rem 0; text-align: center; }
-        nav { background: #002244; display: flex; justify-content: center; gap: 20px; padding: 12px; }
-        nav a { color: white; text-decoration: none; font-weight: 600; padding: 6px 16px; border-radius: 4px; transition: 0.3s; }
-        nav a:hover, nav a.active { background: #1a5276; }
-        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
-        .profile-card { display: flex; gap: 30px; background: var(--card); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); align-items: center; }
-        .profile-card img { width: 220px; height: auto; border-radius: 8px; border: 3px solid var(--primary); object-fit: cover; }
-        .profile-info h1 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.8rem; }
-        .profile-info h3 { margin: 0 0 15px 0; color: var(--secondary); font-weight: 500; }
-        .profile-info p { margin: 6px 0; font-size: 0.95rem; }
-        .section { background: var(--card); margin-top: 25px; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .section h2 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 0; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        footer { text-align: center; padding: 20px; color: var(--secondary); font-size: 0.85rem; margin-top: 40px; }
-        @media (max-width: 768px) { .profile-card { flex-direction: column; text-align: center; } }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prof. Esam A. Al-Qaralleh | Computer Engineering, PSUT</title>
+<meta name="description" content="Academic homepage of Prof. Esam A. Al-Qaralleh, Professor of Computer Engineering at Princess Sumaya University for Technology (PSUT), Amman, Jordan.">
+<meta name="author" content="Esam A. Al-Qaralleh">
+<meta name="theme-color" content="#13294b">
+<meta property="og:title" content="Prof. Esam A. Al-Qaralleh | Computer Engineering, PSUT">
+<meta property="og:description" content="Academic homepage of Prof. Esam A. Al-Qaralleh, Professor of Computer Engineering at Princess Sumaya University for Technology (PSUT), Amman, Jordan.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <h1>Prof. Dr. Esam Atallah Al-Qaralleh</h1>
-    <p>Professor of Computer Engineering | PSUT, Jordan</p>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main navigation">
+    <a class="brand" href="index.html"><span class="brand-name">Esam A. Al-Qaralleh</span><span class="brand-sub">Computer Engineering · PSUT</span></a>
+    <ul class="nav-links"><li><a href="index.html" aria-current="page">About</a></li><li><a href="courses.html">Teaching</a></li><li><a href="publications.html">Publications</a></li><li><a class="ext" href="https://scholar.google.com/citations?user=n0OVcFgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li></ul>
+  </nav>
 </header>
+<main id="main">
 
-<nav>
-    <a href="index.html" class="active">Bio & Home</a>
-    <a href="courses.html">Courses Taught</a>
-    <a href="publications.html">Publications</a>
-    <a href="https://scholar.google.com/citations?user=n(0OVcFgAAAAJ&hl=en" target="_blank">Google Scholar</a>
-</nav>
-
-<div class="container">
-    <div class="profile-card">
-        <img src="profile.jpg" alt="Prof. Dr. Esam AlQaralleh">
-        <div class="profile-info">
-            <h1>Prof. Dr. Esam Atallah Al-Qaralleh</h1>
-            <h3>Professor, Computer Engineering Department</h3>
-            <p><strong>Institution:</strong> Princess Sumaya University for Technology (PSUT), Amman, Jordan</p>
-            <p><strong>Faculty:</strong> King Abdullah II School of Engineering</p>
-            <p><strong>Email:</strong> qaralleh@psut.edu.jo</p>
-            <p><strong>Phone:</strong> (+962) 775624636</p>
-        </div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="portrait"><img src="profile.jpg" alt="Portrait of Prof. Esam A. Al-Qaralleh" width="240" height="240"></div>
+      <ul class="contact-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:qaralleh@psut.edu.jo">qaralleh@psut.edu.jo</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+962775624636">(+962) 775 624 636</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>KASE, PSUT<br>Amman, Jordan</span></li>
+      </ul>
     </div>
-
-    <div class="section">
-        <h2>Biography</h2>
-        <p>Dr. Esam A. AlQaralleh, Ph.D., is a Professor of Computer Engineering at the King Abdullah II School of Engineering (KASE), Princess Sumaya University for Technology (PSUT), Amman, Jordan. He joined PSUT in 2006 and has over 20 years of teaching and academic experience in Computer and Electrical Engineering at both undergraduate and graduate levels.</p>
-        <p>His teaching and research interests include Artificial Intelligence, deep learning, intelligent embedded systems, IoT, FPGA-based computing, video and image processing, computer architecture, and hardware-software co-design. He has extensive leadership experience having served as Dean, Vice Dean, and Head of the Computer Engineering Department at PSUT.</p>
+    <div>
+      <span class="eyebrow">Professor of Computer Engineering</span>
+      <h1>Esam Atallah<br>Al-Qaralleh, Ph.D.</h1>
+      <p class="role">Professor, Computer Engineering Department</p>
+      <p class="affil">King Abdullah II School of Engineering · Princess Sumaya University for Technology (PSUT), Amman, Jordan</p>
+      <p class="intro">I teach and research at the intersection of hardware and intelligence &mdash; from FPGA-based computing and embedded systems to deep learning for video and image analysis.</p>
+      <div class="btn-row">
+        <a class="btn primary" href="mailto:qaralleh@psut.edu.jo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=n0OVcFgAAAAJ&hl=en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 4l10 5.5-10 5.5z"/><path d="M6 12v4.5c0 1.4 2.7 3 6 3s6-1.6 6-3V12"/></svg>Google Scholar</a>
+        <a class="btn" href="publications.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/></svg>Publications</a>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="section">
-        <h2>Academic Background</h2>
-        <ul>
-            <li><strong>Ph.D. in Electronics</strong> — National Chiao Tung University (NCTU), Hsinchu, Taiwan (2000–2006)<br><em>Dissertation:</em> "Design of Motion Estimation for MPEG-4 and H.264 Video Coding"</li>
-            <li><strong>B.Sc. in Electrical Engineering</strong> — University of Jordan, Amman, Jordan (1990–1995)</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Academic Leadership & Appointments</h2>
-        <ul>
-            <li><strong>Professor</strong>, Computer Engineering Dept., PSUT (2023–Present)</li>
-            <li><strong>Dean</strong>, King Abdullah II School of Engineering, PSUT (2021–2023)</li>
-            <li><strong>Vice Dean</strong>, King Abdullah II School of Engineering, PSUT (2019–2021)</li>
-            <li><strong>Associate Professor</strong>, Computer Engineering Dept., PSUT (2016–2023)</li>
-            <li><strong>Head</strong>, Computer Engineering Dept., PSUT (2010–2012 & 2016–2017)</li>
-            <li><strong>Assistant Professor</strong>, Computer Engineering Dept., PSUT (2006–2016)</li>
-        </ul>
-    </div>
+<div class="wrap facts-wrap">
+  <div class="facts" role="list">
+    <div class="fact" role="listitem"><b>20+</b><span>Years of teaching in computer &amp; electrical engineering</span></div>
+    <div class="fact" role="listitem"><b>2006</b><span>Joined PSUT faculty</span></div>
+    <div class="fact" role="listitem"><b>Dean</b><span>School of Engineering, 2021&ndash;2023</span></div>
+    <div class="fact" role="listitem"><b>IEEE</b><span>Senior Member</span></div>
+  </div>
 </div>
 
-<footer>
-    &copy; Prof. Dr. Esam Atallah Al-Qaralleh — Princess Sumaya University for Technology
-</footer>
+<div class="wrap">
+  <section class="section section-grid">
+    <h2 class="section-title">Biography</h2>
+    <div class="prose">
+      <p>Dr. Esam A. AlQaralleh, Ph.D., is a Professor of Computer Engineering at the King Abdullah II School of Engineering (KASE), Princess Sumaya University for Technology (PSUT), Amman, Jordan. He joined PSUT in 2006 and has over 20 years of teaching and academic experience in Computer and Electrical Engineering at both undergraduate and graduate levels.</p>
+      <p>His teaching and research interests include Artificial Intelligence, deep learning, intelligent embedded systems, IoT, FPGA-based computing, video and image processing, computer architecture, and hardware-software co-design. He has extensive leadership experience having served as Dean, Vice Dean, and Head of the Computer Engineering Department at PSUT.</p>
+    </div>
+  </section>
 
+  <section class="section section-grid">
+    <h2 class="section-title">Research Interests</h2>
+    <ul class="tags">
+      <li>Artificial Intelligence</li><li>Deep Learning</li><li>Intelligent Embedded Systems</li><li>Internet of Things</li><li>FPGA-Based Computing</li><li>Video &amp; Image Processing</li><li>Computer Architecture</li><li>Hardware&ndash;Software Co-Design</li>
+    </ul>
+  </section>
+
+  <section class="section section-grid">
+    <h2 class="section-title">Education</h2>
+    <ol class="timeline"><li class="now"><div class="tl-head"><span class="tl-role">Ph.D. in Electronics</span><span class="tl-date">2000 &ndash; 2006</span></div><div class="tl-place">National Chiao Tung University (NCTU), Hsinchu, Taiwan</div><div class="tl-note">Dissertation: &ldquo;Design of Motion Estimation for MPEG-4 and H.264 Video Coding&rdquo;</div></li><li><div class="tl-head"><span class="tl-role">B.Sc. in Electrical Engineering</span><span class="tl-date">1990 &ndash; 1995</span></div><div class="tl-place">University of Jordan, Amman, Jordan</div></li></ol>
+  </section>
+
+  <section class="section section-grid">
+    <h2 class="section-title">Appointments</h2>
+    <ol class="timeline"><li class="now"><div class="tl-head"><span class="tl-role">Professor</span><span class="tl-date">2023 &ndash; Present</span></div><div class="tl-place">Computer Engineering Department, PSUT</div></li><li><div class="tl-head"><span class="tl-role">Dean</span><span class="tl-date">2021 &ndash; 2023</span></div><div class="tl-place">King Abdullah II School of Engineering, PSUT</div></li><li><div class="tl-head"><span class="tl-role">Vice Dean</span><span class="tl-date">2019 &ndash; 2021</span></div><div class="tl-place">King Abdullah II School of Engineering, PSUT</div></li><li><div class="tl-head"><span class="tl-role">Associate Professor</span><span class="tl-date">2016 &ndash; 2023</span></div><div class="tl-place">Computer Engineering Department, PSUT</div></li><li><div class="tl-head"><span class="tl-role">Head of Department</span><span class="tl-date">2010 &ndash; 2012 &amp; 2016 &ndash; 2017</span></div><div class="tl-place">Computer Engineering Department, PSUT</div></li><li><div class="tl-head"><span class="tl-role">Assistant Professor</span><span class="tl-date">2006 &ndash; 2016</span></div><div class="tl-place">Computer Engineering Department, PSUT</div></li></ol>
+  </section>
+
+  <section class="section section-grid">
+    <h2 class="section-title">Service &amp; Mentorship</h2>
+    <div class="cards-2">
+      <div class="hcard"><h3>Leadership &amp; Accreditation</h3><p>Led the School of Engineering to ABET EAC accreditation of the Networks &amp; Information Security Engineering program, while maintaining accreditation for all other programs.</p></div>
+      <div class="hcard"><h3>IEEE Community</h3><p>Senior IEEE member who has coordinated IEEE events in Jordan and served on scientific, technical-program and organizing committees of international conferences.</p></div>
+      <div class="hcard"><h3>Student Mentorship</h3><p>Mentor to student scientific clubs competing regionally and internationally; many senior design projects under his supervision have won awards.</p></div>
+      <div class="hcard"><h3>Industry Experience</h3><p>Prior engineering roles at Euro-Gulf Electronics Co., the Royal Scientific Society, and the Industrial Technology Research Institute (ITRI), Hsinchu, Taiwan.</p></div>
+    </div>
+  </section>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h4>Prof. Esam A. Al-Qaralleh, Ph.D.</h4>
+      <p>Professor of Computer Engineering</p>
+      <p>King Abdullah II School of Engineering</p>
+      <p>Princess Sumaya University for Technology, Amman, Jordan</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul><li><a href="mailto:qaralleh@psut.edu.jo">qaralleh@psut.edu.jo</a></li><li><a href="tel:+962775624636">(+962) 775 624 636</a></li></ul>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul><li><a href="courses.html">Teaching</a></li><li><a href="publications.html">Publications</a></li><li><a href="https://scholar.google.com/citations?user=n0OVcFgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li></ul>
+    </div>
+  </div>
+  <div class="copy"><div class="wrap"><span>&copy; 2026 Esam A. Al-Qaralleh</span><span>Princess Sumaya University for Technology</span></div></div>
+</footer>
 </body>
 </html>

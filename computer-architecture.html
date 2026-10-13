@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Computer Architecture & Organization | Prof. Dr. Esam AlQaralleh</title>
-    <style>
-        :root { --primary: #003366; --secondary: #4a5568; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-        header { background-color: var(--primary); color: white; padding: 1.5rem 0; text-align: center; }
-        nav { background: #002244; display: flex; justify-content: center; gap: 20px; padding: 12px; }
-        nav a { color: white; text-decoration: none; font-weight: 600; padding: 6px 16px; border-radius: 4px; }
-        nav a:hover { background: #1a5276; }
-        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
-        .content { background: var(--card); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h2 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
-        .back-btn { display: inline-block; margin-bottom: 15px; color: var(--primary); font-weight: bold; text-decoration: none; }
-        footer { text-align: center; padding: 20px; color: var(--secondary); font-size: 0.85rem; margin-top: 40px; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Computer Architecture & Organization | Prof. Esam A. Al-Qaralleh</title>
+<meta name="description" content="Comprehensive instruction in computer architecture and organization, focusing on processor organization, instruction set architectures (ISA), memory hierarchy, I/O systems, pipelining, and performance evaluation.">
+<meta name="author" content="Esam A. Al-Qaralleh">
+<meta name="theme-color" content="#13294b">
+<meta property="og:title" content="Computer Architecture & Organization | Prof. Esam A. Al-Qaralleh">
+<meta property="og:description" content="Comprehensive instruction in computer architecture and organization, focusing on processor organization, instruction set architectures (ISA), memory hierarchy, I/O systems, pipelining, and performance evaluation.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <h1>Computer Architecture and Organization</h1>
-    <p>Course Details & Syllabus Overview</p>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main navigation">
+    <a class="brand" href="index.html"><span class="brand-name">Esam A. Al-Qaralleh</span><span class="brand-sub">Computer Engineering · PSUT</span></a>
+    <ul class="nav-links"><li><a href="index.html">About</a></li><li><a href="courses.html" aria-current="page">Teaching</a></li><li><a href="publications.html">Publications</a></li><li><a class="ext" href="https://scholar.google.com/citations?user=n0OVcFgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li></ul>
+  </nav>
 </header>
+<main id="main">
 
-<nav>
-    <a href="index.html">Bio & Home</a>
-    <a href="courses.html">Courses Taught</a>
-    <a href="publications.html">Publications</a>
-</nav>
-
-<div class="container">
-    <a href="courses.html" class="back-btn">&larr; Back to Courses List</a>
-    <div class="content">
-        <h2>Course Description</h2>
-        <p>This course provides comprehensive instruction in computer architecture and organization, focusing on processor organization, instruction set architectures (ISA), memory hierarchy, I/O systems, pipelining, and performance evaluation.</p>
-        
-        <h2>Key Topics Covered</h2>
-        <ul>
-            <li>Processor architecture and instruction execution cycles.</li>
-            <li>Pipelining hazards, branch prediction, and instruction-level parallelism.</li>
-            <li>Memory hierarchy: cache structures, mapping techniques, and virtual memory.</li>
-            <li>Arithmetic Logic Unit (ALU) design and computer arithmetic algorithms.</li>
-            <li>Verilog HDL modeling and verification on FPGA platforms.</li>
-        </ul>
-
-        <h2>Pedagogical Approach</h2>
-        <p>Students utilize Verilog HDL and modern FPGA platforms to design, implement, and verify digital processor pipelines and arithmetic circuits, bridging foundational theoretical concepts with hardware prototyping.</p>
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a><span>/</span><a href="courses.html">Teaching</a><span>/</span>Course</div>
+  <span class="eyebrow">Previously taught</span>
+  <h1>Computer Architecture &amp; Organization</h1>
+  <p class="lede">Comprehensive instruction in computer architecture and organization, focusing on processor organization, instruction set architectures (ISA), memory hierarchy, I/O systems, pipelining, and performance evaluation.</p>
+</div></section>
+<div class="wrap">
+  <section class="section detail-grid">
+    <div class="prose">
+      <h2>Key Topics</h2>
+      <ul class="topic-list"><li>Processor architecture and instruction execution cycles.</li><li>Pipelining hazards, branch prediction, and instruction-level parallelism.</li><li>Memory hierarchy: cache structures, mapping techniques, and virtual memory.</li><li>Arithmetic Logic Unit (ALU) design and computer arithmetic algorithms.</li><li>Verilog HDL modeling and verification on FPGA platforms.</li></ul>
+      <h2 style="margin-top:36px">Pedagogical Approach</h2><p>Students utilize Verilog HDL and modern FPGA platforms to design, implement, and verify digital processor pipelines and arithmetic circuits, bridging foundational theoretical concepts with hardware prototyping.</p>
+      
     </div>
+    <aside class="aside">
+      <h4>At a glance</h4>
+      <dl><dt>Instructor</dt><dd>Prof. Esam A. Al-Qaralleh</dd><dt>Department</dt><dd>Computer Engineering, PSUT</dd><dt>Status</dt><dd>Previously taught</dd><dt>Audience</dt><dd>Undergraduate</dd></dl>
+      <a class="back" href="courses.html">&larr; All courses</a>
+    </aside>
+  </section>
+  
 </div>
-
-<footer>
-    &copy; Prof. Dr. Esam Atallah Al-Qaralleh — Princess Sumaya University for Technology
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h4>Prof. Esam A. Al-Qaralleh, Ph.D.</h4>
+      <p>Professor of Computer Engineering</p>
+      <p>King Abdullah II School of Engineering</p>
+      <p>Princess Sumaya University for Technology, Amman, Jordan</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul><li><a href="mailto:qaralleh@psut.edu.jo">qaralleh@psut.edu.jo</a></li><li><a href="tel:+962775624636">(+962) 775 624 636</a></li></ul>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul><li><a href="courses.html">Teaching</a></li><li><a href="publications.html">Publications</a></li><li><a href="https://scholar.google.com/citations?user=n0OVcFgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li></ul>
+    </div>
+  </div>
+  <div class="copy"><div class="wrap"><span>&copy; 2026 Esam A. Al-Qaralleh</span><span>Princess Sumaya University for Technology</span></div></div>
 </footer>
-
 </body>
 </html>
