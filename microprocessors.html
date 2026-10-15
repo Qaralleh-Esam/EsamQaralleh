@@ -3,17 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Microprocessors & Assembly Language | Prof. Esam A. Al-Qaralleh</title>
-<meta name="description" content="Covers microprocessor internal architecture, assembly language programming, memory mapping, and bus timing interface design.">
+<title>Microprocessors &amp; Assembly Language (22344) | Prof. Esam A. Al-Qaralleh</title>
+<meta name="description" content="Microprocessor architecture and organization, bus architectures and assembly language fundamentals: data transfer and addressing modes, conditional and arithmetic instructions, and strings and arrays. Memory and I/O subsystems, their organization, timing and interfacing, peripheral controllers and their programming, and the practice of microprocessor system design.">
 <meta name="author" content="Esam A. Al-Qaralleh">
 <meta name="theme-color" content="#13294b">
-<meta property="og:title" content="Microprocessors & Assembly Language | Prof. Esam A. Al-Qaralleh">
-<meta property="og:description" content="Covers microprocessor internal architecture, assembly language programming, memory mapping, and bus timing interface design.">
+<meta property="og:title" content="Microprocessors &amp; Assembly Language (22344) | Prof. Esam A. Al-Qaralleh">
+<meta property="og:description" content="Microprocessor architecture and organization, bus architectures and assembly language fundamentals: data transfer and addressing modes, conditional and arithmetic instructions, and strings and arrays. Memory and I/O subsystems, their organization, timing and interfacing, peripheral controllers and their programming, and the practice of microprocessor system design.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
+<style>
+/* course-page additions: works alongside style.css */
+.course-block{margin-top:2.25rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;margin:1.25rem 0 0;padding:0;list-style:none}
+.facts li{border:1px solid rgba(19,41,75,.15);border-radius:8px;padding:.7rem .85rem;background:rgba(19,41,75,.03)}
+.facts .k{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;opacity:.7}
+.facts .v{display:block;font-weight:600;margin-top:.15rem}
+.weeks{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:.75rem}
+.weeks th,.weeks td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid rgba(19,41,75,.12);vertical-align:top}
+.weeks th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.weeks td:first-child{width:3rem;font-variant-numeric:tabular-nums;font-weight:600}
+.weeks td:nth-child(2){font-weight:600}
+.table-scroll{overflow-x:auto}
+.grading{list-style:none;padding:0;margin:.75rem 0 0}
+.grading li{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;border-bottom:1px solid rgba(19,41,75,.12)}
+.grading b{font-variant-numeric:tabular-nums}
+.video-card{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;border:1px solid rgba(19,41,75,.15);border-radius:10px;padding:1.1rem 1.25rem;margin-top:.75rem;background:rgba(19,41,75,.03)}
+.video-card p{margin:0;flex:1 1 260px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:6px;background:#13294b;color:#fff !important;text-decoration:none;font-weight:600}
+.btn:hover,.btn:focus-visible{background:#1d3d6e}
+.btn.secondary{background:transparent;color:#13294b !important;border:1px solid #13294b}
+.btn svg{width:1.1em;height:1.1em;fill:currentColor}
+.tabs{margin-top:.75rem}
+.tablist{display:flex;flex-wrap:wrap;gap:.25rem;border-bottom:2px solid rgba(19,41,75,.15)}
+.tablist button{font:inherit;font-weight:600;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:.6rem .9rem;cursor:pointer;color:inherit;opacity:.7}
+.tablist button[aria-selected="true"]{border-bottom-color:#13294b;opacity:1}
+.tablist button:focus-visible{outline:2px solid #13294b;outline-offset:2px}
+.tabpanel{padding:1rem 0 0}
+.tabpanel h3{margin-top:0}
+.js .tabpanel h3.panel-title{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.res-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.5rem}
+.res-list a{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.65rem .8rem;border:1px solid rgba(19,41,75,.15);border-radius:6px;text-decoration:none;color:inherit}
+.res-list a:hover,.res-list a:focus-visible{border-color:#13294b;background:rgba(19,41,75,.05)}
+.res-type{flex:none;font-size:.7rem;font-weight:700;letter-spacing:.05em;padding:.15rem .4rem;border-radius:4px;background:rgba(19,41,75,.1)}
+.folder-link{display:inline-block;margin-top:.9rem;font-weight:600}
+.quick{display:flex;align-items:center;gap:.85rem;margin:0 0 .75rem;padding:1rem 1.1rem;border-radius:10px;background:#13294b;color:#fff !important;text-decoration:none;box-shadow:0 2px 6px rgba(19,41,75,.25);transition:transform .15s ease,background .15s ease}
+.quick:hover,.quick:focus-visible{background:#1d3d6e;transform:translateY(-1px)}
+.quick:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.quick-icon{flex:none;display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:8px;background:rgba(255,255,255,.15)}
+.quick-icon svg{width:1.4rem;height:1.4rem;fill:#fff}
+.quick-title{display:block;font-weight:700;font-size:1.05rem;line-height:1.2}
+.quick-sub{display:block;font-size:.85rem;opacity:.85;margin-top:.15rem}
+#lectures,#materials{scroll-margin-top:1.5rem}
+#lectures .video-card,#materials .tabs{border-left:4px solid #13294b}
+#materials .tabs{padding-left:1rem}
+.aside .back{display:inline-block;margin-top:.5rem}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -24,28 +71,146 @@
   </nav>
 </header>
 <main id="main">
-
 <section class="pagehead"><div class="wrap">
   <div class="crumbs"><a href="index.html">Home</a><span>/</span><a href="courses.html">Teaching</a><span>/</span>Course</div>
-  <span class="eyebrow">Recently taught</span>
+  <span class="eyebrow">Course 22344 · Recently taught</span>
   <h1>Microprocessors &amp; Assembly Language</h1>
-  <p class="lede">Covers microprocessor internal architecture, assembly language programming, memory mapping, and bus timing interface design.</p>
+  <p class="lede">Microprocessor architecture and organization, bus architectures and assembly language fundamentals: data transfer and addressing modes, conditional and arithmetic instructions, and strings and arrays. Memory and I/O subsystems, their organization, timing and interfacing, peripheral controllers and their programming, and the practice of microprocessor system design.</p>
 </div></section>
 <div class="wrap">
   <section class="section detail-grid">
     <div class="prose">
-      <h2>Key Topics</h2>
-      <ul class="topic-list"><li>Assembly language syntax, instruction encoding, and addressing modes.</li><li>Bus cycles, clock timing diagrams, and memory interfacing.</li><li>Peripheral control, interrupts, and direct memory access (DMA).</li><li>Emulation techniques and software simulation environment.</li></ul>
-      
-      
+      <h2>Course Description</h2>
+      <p>Microprocessor architecture and organization, bus architectures and assembly language fundamentals: data transfer and addressing modes, conditional and arithmetic instructions, and strings and arrays. Memory and I/O subsystems, their organization, timing and interfacing, peripheral controllers and their programming, and the practice of microprocessor system design.</p>
+      <p>The course is tightly integrated with a lab component built around an 80x86 microprocessor system. Students wire,
+      test and troubleshoot interface hardware, run I/O interfacing experiments, and write the x86 assembly code that
+      drives them.</p>
+      <ul class="facts">
+        <li><span class="k">Course code</span><span class="v">22344</span></li>
+        <li><span class="k">Credit hours</span><span class="v">3</span></li>
+        <li><span class="k">Prerequisite</span><span class="v">22241 Digital Logic Design</span></li>
+        <li><span class="k">Type</span><span class="v">Lecture</span></li>
+      </ul>
+
+      <div class="course-block">
+        <h2>Learning Outcomes</h2>
+        <p>On completing the course, students will:</p>
+        <ol class="topic-list">
+          <li>Have a basic knowledge of microprocessor architecture.</li>
+          <li>Have a working knowledge of the 80x86 instruction set.</li>
+          <li>Be able to write and debug assembly programs that meet given specifications.</li>
+          <li>Have a basic knowledge of memory and I/O interfaces, address decoding and bus transactions.</li>
+          <li>Have a working knowledge of the interrupt-based control model, including software and hardware interrupts.</li>
+        </ol>
+      </div>
+
+      <div class="course-block">
+        <h2>Topics Covered</h2>
+        <div class="table-scroll">
+        <table class="weeks">
+          <thead><tr><th scope="col">#</th><th scope="col">Topic</th><th scope="col">Hours</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>80x86 processor architecture and programming models</td><td>2</td></tr>
+            <tr><td>2</td><td>Data types and addressing modes</td><td>8</td></tr>
+            <tr><td>3</td><td>Conditional instructions</td><td>4</td></tr>
+            <tr><td>4</td><td>Arithmetic instructions</td><td>4</td></tr>
+            <tr><td>5</td><td>Stack and procedures</td><td>4</td></tr>
+            <tr><td>6</td><td>Strings and arrays</td><td>4</td></tr>
+            <tr><td>7</td><td>Memory interfacing and address decoding</td><td>12</td></tr>
+            <tr><td>8</td><td>Basic I/O interfacing (PPI)</td><td>6</td></tr>
+            <tr><td>9</td><td>Timer interfacing</td><td>4</td></tr>
+            <tr><td>10</td><td>Serial I/O interface</td><td>4</td></tr>
+            <tr><td>11</td><td>Interrupts</td><td>2</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="course-block">
+        <h2>Assessment</h2>
+        <ul class="grading">
+          <li><span>Midterm exams</span><b>30%</b></li>
+          <li><span>Final exam</span><b>40%</b></li>
+          <li><span>Project</span><b>20%</b></li>
+          <li><span>Homework and quizzes</span><b>10%</b></li>
+        </ul>
+      </div>
+
+      <div class="course-block">
+        <h2>Textbook</h2>
+        <ul class="topic-list">
+          <li>Barry B. Brey, <em>The Intel Microprocessors</em>, 8th ed., Pearson, 2009.</li>
+        </ul>
+      </div>
+
+      <div class="course-block" id="lectures">
+        <h2>Video Lectures</h2>
+        <div class="video-card">
+          <p>All recorded lectures for the course are collected in one YouTube playlist, in teaching order.</p>
+          <a class="btn" href="https://www.youtube.com/playlist?list=PLED_7E5wQkhpZVNU5jICRSZPChI33aDFu" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            Open the playlist on YouTube</a>
+          <a class="btn secondary" href="https://www.youtube.com/watch?v=2xFOQQH18HU&amp;list=PLED_7E5wQkhpZVNU5jICRSZPChI33aDFu" target="_blank" rel="noopener">Start with lecture 1</a>
+        </div>
+      </div>
+
+      <div class="course-block" id="materials">
+        <h2>Course Materials</h2>
+        <p>Course materials are hosted on Google Drive and open in a new tab. Download the
+        <a href="https://drive.google.com/file/d/1tGCT63pKQpPn1kEluUJYss2Tu2JNfoPq/view" target="_blank" rel="noopener">course outline</a>, or browse the
+        <a href="https://drive.google.com/drive/folders/1IpJO__tsNaLVAXBshlPMbBziAHYczKyB" target="_blank" rel="noopener">whole folder</a>.</p>
+        <div class="tabs" data-tabs>
+          <div class="tablist" role="tablist" aria-label="Course materials" hidden>
+            <button role="tab" id="tab-slides" aria-controls="panel-slides" aria-selected="true">Slides</button>
+            <button role="tab" id="tab-supp" aria-controls="panel-supp" aria-selected="false" tabindex="-1">Supplement Material</button>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-slides" aria-labelledby="tab-slides">
+            <h3 class="panel-title">Slides</h3>
+            <ul class="res-list">
+          <li><a href="https://drive.google.com/file/d/1TqYh3Fpjc9AJJkNbZSh6vr6R2HVTUn_t/view" target="_blank" rel="noopener"><span class="res-name">Microprocessors: Introduction</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://drive.google.com/file/d/19LC5w8jquOHu2dsJUtBv6euRrYMXp0-X/view" target="_blank" rel="noopener"><span class="res-name">Microprocessor Data Types</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1FlntAqJ70vJYP_hgZk9LIXezpY6SNIDZ/view" target="_blank" rel="noopener"><span class="res-name">8086 Memory Segmentation</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1ZMy90P0D8r3XeTC7TUbh-Liv-wSrUdU9/view" target="_blank" rel="noopener"><span class="res-name">String Operations</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1bqaAz0UHBT766ir1UcC-2sgxeeTaNPwU/view" target="_blank" rel="noopener"><span class="res-name">Hardware Detail of the Intel 8088</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1Xa8iAUA4NndCCsuwUhukVEEWvCGqVRjz/view" target="_blank" rel="noopener"><span class="res-name">16-bit Memory Interface</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1nU0V53Z8S8f7dn8EHAcYfT99kOrNaM73/view" target="_blank" rel="noopener"><span class="res-name">Address Decoding</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1fC6qQi25qKey7T5ZthW49IvuEG5ColSF/view" target="_blank" rel="noopener"><span class="res-name">I/O Interface</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1ijZm-5DRFT9KptFtp80g247FmDDxbkLE/view" target="_blank" rel="noopener"><span class="res-name">Interrupts</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1D87KCNmBpFIq3VQaNg7de4fSOh8uPlfy/view" target="_blank" rel="noopener"><span class="res-name">VGA Memory</span><span class="res-type">PPTX</span></a></li>
+            </ul>
+            <a class="folder-link" href="https://drive.google.com/drive/folders/1SA3kBDy3wZ9oNnpHioSC1OHuT0LngQex" target="_blank" rel="noopener">Open the Slides folder &rarr;</a>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-supp" aria-labelledby="tab-supp">
+            <h3 class="panel-title">Supplement Material</h3>
+            <ul class="res-list">
+          <li><a href="https://drive.google.com/file/d/1WnHKii8ZCVesMtiygIq5abvahMQ5vmct/view" target="_blank" rel="noopener"><span class="res-name">Understanding the 8085/8086 Microprocessors</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1qwP-5dbldXR1m7m27s7lojYcbnpkEKj4/view" target="_blank" rel="noopener"><span class="res-name">Intel 8086 Instruction Code Table</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1FwJ-WSp_Pv2WYJXECebrfw4CEJRh9CYC/view" target="_blank" rel="noopener"><span class="res-name">Instruction Timing</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1gRNelyw7J783OnRHaLUQl0Al-tDpzCX3/view" target="_blank" rel="noopener"><span class="res-name">Timing</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1mYGIQJaimx5VY9lnRulndZLVlU0GQ-3A/view" target="_blank" rel="noopener"><span class="res-name">8086 Interfacing: Some Important Points</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1IQuDq13BECP5PHYGsXG6_8rqT8r094Wj/view" target="_blank" rel="noopener"><span class="res-name">Reading Multi-Digit Numbers from the Keyboard</span><span class="res-type">DOCX</span></a></li>
+          <li><a href="https://drive.google.com/file/d/18ZL706p2Pq37tqQkBcB7vbuJ0vYfmy0Q/view" target="_blank" rel="noopener"><span class="res-name">Suggested Projects</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1xqujS-_vmVxjjO-mE0MzRb77oB9DHQyG/view" target="_blank" rel="noopener"><span class="res-name">Reading: publication_1_26408_35</span><span class="res-type">PDF</span></a></li>
+            </ul>
+            <a class="folder-link" href="https://drive.google.com/drive/folders/1vVmhURUFfeJOjwlnyQ-es52zL3Rz3kbI" target="_blank" rel="noopener">Open the Supplement Material folder &rarr;</a>
+          </div>
+        </div>
+      </div>
     </div>
     <aside class="aside">
       <h4>At a glance</h4>
-      <dl><dt>Instructor</dt><dd>Prof. Esam A. Al-Qaralleh</dd><dt>Department</dt><dd>Computer Engineering, PSUT</dd><dt>Status</dt><dd>Recently taught</dd><dt>Audience</dt><dd>Undergraduate</dd></dl>
+      <a class="quick" href="#lectures">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></span>
+        <span><span class="quick-title">Course Videos</span><span class="quick-sub">Recorded lectures on YouTube</span></span>
+      </a>
+      <a class="quick" href="#materials">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></span>
+        <span><span class="quick-title">Course Material</span><span class="quick-sub">Slides and supplements</span></span>
+      </a>
       <a class="back" href="courses.html">&larr; All courses</a>
     </aside>
   </section>
-  
+
 </div>
 </main>
 <footer class="site-footer">
@@ -67,5 +232,39 @@
   </div>
   <div class="copy"><div class="wrap"><span>&copy; 2026 Esam A. Al-Qaralleh</span><span>Princess Sumaya University for Technology</span></div></div>
 </footer>
+<script>
+/* Accessible tabs. Without JavaScript every panel is shown in turn. */
+(function () {
+  document.documentElement.classList.add('js');
+  document.querySelectorAll('[data-tabs]').forEach(function (root) {
+    var list = root.querySelector('[role="tablist"]');
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+    list.hidden = false;
+    function select(i, focus) {
+      tabs.forEach(function (t, j) {
+        var on = i === j;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        panels[j].hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        var k = e.key, n = tabs.length;
+        if (k === 'ArrowRight') select((i + 1) % n, true);
+        else if (k === 'ArrowLeft') select((i - 1 + n) % n, true);
+        else if (k === 'Home') select(0, true);
+        else if (k === 'End') select(n - 1, true);
+        else return;
+        e.preventDefault();
+      });
+    });
+    select(0);
+  });
+})();
+</script>
 </body>
 </html>
