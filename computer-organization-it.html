@@ -49,6 +49,17 @@
 .res-list a:hover,.res-list a:focus-visible{border-color:#13294b;background:rgba(19,41,75,.05)}
 .res-type{flex:none;font-size:.7rem;font-weight:700;letter-spacing:.05em;padding:.15rem .4rem;border-radius:4px;background:rgba(19,41,75,.1)}
 .folder-link{display:inline-block;margin-top:.9rem;font-weight:600}
+.quick{display:flex;align-items:center;gap:.85rem;margin:0 0 .75rem;padding:1rem 1.1rem;border-radius:10px;background:#13294b;color:#fff !important;text-decoration:none;box-shadow:0 2px 6px rgba(19,41,75,.25);transition:transform .15s ease,background .15s ease}
+.quick:hover,.quick:focus-visible{background:#1d3d6e;transform:translateY(-1px)}
+.quick:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.quick-icon{flex:none;display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:8px;background:rgba(255,255,255,.15)}
+.quick-icon svg{width:1.4rem;height:1.4rem;fill:#fff}
+.quick-title{display:block;font-weight:700;font-size:1.05rem;line-height:1.2}
+.quick-sub{display:block;font-size:.85rem;opacity:.85;margin-top:.15rem}
+#lectures,#materials{scroll-margin-top:1.5rem}
+#lectures .video-card,#materials .tabs{border-left:4px solid #13294b}
+#materials .tabs{padding-left:1rem}
+.aside .back{display:inline-block;margin-top:.5rem}
 </style>
 </head>
 <body>
@@ -210,8 +221,14 @@
     </div>
     <aside class="aside">
       <h4>At a glance</h4>
-      <dl><dt>Course</dt><dd>22342 · 3 credit hours</dd><dt>Instructor</dt><dd>Prof. Esam A. Al-Qaralleh</dd><dt>Department</dt><dd>Computer Engineering, PSUT</dd><dt>Prerequisite</dt><dd>22241 Digital Logic Design</dd><dt>Delivery</dt><dd>Blended (face-to-face and asynchronous)</dd><dt>Audience</dt><dd>Computer Science and Software Engineering undergraduates</dd><dt>Status</dt><dd>Recently taught</dd></dl>
-      <p><a href="#lectures">Video lectures</a><br><a href="#materials">Slides &amp; workbooks</a></p>
+      <a class="quick" href="#lectures">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></span>
+        <span><span class="quick-title">Course Videos</span><span class="quick-sub">Recorded lectures on YouTube</span></span>
+      </a>
+      <a class="quick" href="#materials">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></span>
+        <span><span class="quick-title">Course Material</span><span class="quick-sub">Slides, workbooks and supplements</span></span>
+      </a>
       <a class="back" href="courses.html">&larr; All courses</a>
     </aside>
   </section>
