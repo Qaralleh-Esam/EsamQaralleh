@@ -3,17 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Digital Logic Design & Laboratory | Prof. Esam A. Al-Qaralleh</title>
+<title>Digital Logic Design &amp; Laboratory (22241) | Prof. Esam A. Al-Qaralleh</title>
 <meta name="description" content="Foundational course covering binary numbers, logic gates, Boolean simplification, combinational circuits, and finite state machines.">
 <meta name="author" content="Esam A. Al-Qaralleh">
 <meta name="theme-color" content="#13294b">
-<meta property="og:title" content="Digital Logic Design & Laboratory | Prof. Esam A. Al-Qaralleh">
+<meta property="og:title" content="Digital Logic Design &amp; Laboratory (22241) | Prof. Esam A. Al-Qaralleh">
 <meta property="og:description" content="Foundational course covering binary numbers, logic gates, Boolean simplification, combinational circuits, and finite state machines.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
+<style>
+/* course-page additions: works alongside style.css */
+.course-block{margin-top:2.25rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;margin:1.25rem 0 0;padding:0;list-style:none}
+.facts li{border:1px solid rgba(19,41,75,.15);border-radius:8px;padding:.7rem .85rem;background:rgba(19,41,75,.03)}
+.facts .k{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;opacity:.7}
+.facts .v{display:block;font-weight:600;margin-top:.15rem}
+.weeks{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:.75rem}
+.weeks th,.weeks td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid rgba(19,41,75,.12);vertical-align:top}
+.weeks th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.weeks td:first-child{width:3rem;font-variant-numeric:tabular-nums;font-weight:600}
+.weeks td:nth-child(2){font-weight:600}
+.table-scroll{overflow-x:auto}
+.grading{list-style:none;padding:0;margin:.75rem 0 0}
+.grading li{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;border-bottom:1px solid rgba(19,41,75,.12)}
+.grading b{font-variant-numeric:tabular-nums}
+.video-card{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;border:1px solid rgba(19,41,75,.15);border-radius:10px;padding:1.1rem 1.25rem;margin-top:.75rem;background:rgba(19,41,75,.03)}
+.video-card p{margin:0;flex:1 1 260px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:6px;background:#13294b;color:#fff !important;text-decoration:none;font-weight:600}
+.btn:hover,.btn:focus-visible{background:#1d3d6e}
+.btn.secondary{background:transparent;color:#13294b !important;border:1px solid #13294b}
+.btn svg{width:1.1em;height:1.1em;fill:currentColor}
+.tabs{margin-top:.75rem}
+.tablist{display:flex;flex-wrap:wrap;gap:.25rem;border-bottom:2px solid rgba(19,41,75,.15)}
+.tablist button{font:inherit;font-weight:600;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:.6rem .9rem;cursor:pointer;color:inherit;opacity:.7}
+.tablist button[aria-selected="true"]{border-bottom-color:#13294b;opacity:1}
+.tablist button:focus-visible{outline:2px solid #13294b;outline-offset:2px}
+.tabpanel{padding:1rem 0 0}
+.tabpanel h3{margin-top:0}
+.js .tabpanel h3.panel-title{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.res-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.5rem}
+.res-list a{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.65rem .8rem;border:1px solid rgba(19,41,75,.15);border-radius:6px;text-decoration:none;color:inherit}
+.res-list a:hover,.res-list a:focus-visible{border-color:#13294b;background:rgba(19,41,75,.05)}
+.res-type{flex:none;font-size:.7rem;font-weight:700;letter-spacing:.05em;padding:.15rem .4rem;border-radius:4px;background:rgba(19,41,75,.1)}
+.folder-link{display:inline-block;margin-top:.9rem;font-weight:600}
+.quick{display:flex;align-items:center;gap:.85rem;margin:0 0 .75rem;padding:1rem 1.1rem;border-radius:10px;background:#13294b;color:#fff !important;text-decoration:none;box-shadow:0 2px 6px rgba(19,41,75,.25);transition:transform .15s ease,background .15s ease}
+.quick:hover,.quick:focus-visible{background:#1d3d6e;transform:translateY(-1px)}
+.quick:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.quick-icon{flex:none;display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:8px;background:rgba(255,255,255,.15)}
+.quick-icon svg{width:1.4rem;height:1.4rem;fill:#fff}
+.quick-title{display:block;font-weight:700;font-size:1.05rem;line-height:1.2}
+.quick-sub{display:block;font-size:.85rem;opacity:.85;margin-top:.15rem}
+#lectures,#materials{scroll-margin-top:1.5rem}
+#lectures .video-card,#materials .tabs{border-left:4px solid #13294b}
+#materials .tabs{padding-left:1rem}
+.aside .back{display:inline-block;margin-top:.5rem}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -24,46 +71,148 @@
   </nav>
 </header>
 <main id="main">
-
 <section class="pagehead"><div class="wrap">
   <div class="crumbs"><a href="index.html">Home</a><span>/</span><a href="courses.html">Teaching</a><span>/</span>Course</div>
-  <span class="eyebrow">Recently taught</span>
+  <span class="eyebrow">Course 22241 · Recently taught</span>
   <h1>Digital Logic Design &amp; Laboratory</h1>
   <p class="lede">Foundational course covering binary numbers, logic gates, Boolean simplification, combinational circuits, and finite state machines.</p>
 </div></section>
 <div class="wrap">
   <section class="section detail-grid">
     <div class="prose">
-      <h2>Key Topics</h2>
-      <ul class="topic-list"><li>Number systems, binary arithmetic, and 2's complement representation.</li><li>Boolean algebra, Karnaugh maps, and logic gate minimization.</li><li>Multiplexers, decoders, adders, and arithmetic circuits.</li><li>Flip-flops, counters, shift registers, and Finite State Machine (FSM) design.</li></ul>
-      
-      
+      <h2>Course Description</h2>
+      <p>Foundational course covering binary numbers, logic gates, Boolean simplification, combinational circuits, and finite state machines. Students move from number systems and Boolean algebra to the design of combinational and sequential circuits, and build and test their designs in the laboratory.</p>
+      <ul class="facts">
+        <li><span class="k">Course code</span><span class="v">22241</span></li>
+        <li><span class="k">Level</span><span class="v">Undergraduate</span></li>
+        <li><span class="k">Type</span><span class="v">Lecture &amp; Lab</span></li>
+        <li><span class="k">Leads to</span><span class="v">22344 Microprocessors</span></li>
+      </ul>
+
+      <div class="course-block">
+        <h2>Key Topics</h2>
+        <ol class="topic-list">
+          <li>Number systems, binary arithmetic, and 2&rsquo;s complement representation.</li>
+          <li>Boolean algebra, Karnaugh maps, and logic gate minimization.</li>
+          <li>Multiplexers, decoders, adders, and arithmetic circuits.</li>
+          <li>Flip-flops, counters, shift registers, and Finite State Machine (FSM) design.</li>
+        </ol>
+      </div>
+
+      <div class="course-block">
+        <h2>Topics Covered</h2>
+        <div class="table-scroll">
+        <table class="weeks">
+          <thead><tr><th scope="col">#</th><th scope="col">Topic</th><th scope="col">Content</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Binary systems</td><td>Number bases and conversions, complements, signed numbers, binary codes</td></tr>
+            <tr><td>2</td><td>Boolean algebra &amp; logic gates</td><td>Theorems, Boolean functions, canonical and standard forms</td></tr>
+            <tr><td>3</td><td>Gate-level minimization</td><td>Karnaugh maps, don&rsquo;t-care conditions, NAND/NOR implementation</td></tr>
+            <tr><td>4</td><td>Combinational logic</td><td>Adders, subtractors, comparators, decoders, encoders, multiplexers</td></tr>
+            <tr><td>5</td><td>Synchronous sequential logic</td><td>Latches, flip-flops, state diagrams and finite state machines</td></tr>
+            <tr><td>6</td><td>Registers &amp; counters</td><td>Shift registers, ripple and synchronous counters</td></tr>
+            <tr><td>7</td><td>Memory &amp; programmable logic</td><td>RAM, ROM and programmable logic devices</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="course-block">
+        <h2>Textbook</h2>
+        <ul class="topic-list">
+          <li>M. Morris Mano and Michael D. Ciletti, <em>Digital Design</em>, Pearson.</li>
+        </ul>
+      </div>
+
+      <div class="course-block" id="lectures">
+        <h2>Video Lectures</h2>
+        <div class="video-card">
+          <p>Recorded lecture demonstrations, practical laboratory tutorials, and student video presentations are collected in one YouTube playlist.</p>
+          <a class="btn" href="https://www.youtube.com/playlist?list=PLED_7E5wQkhoRqTm6RFFjYwrRh4SE69Zh" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            Open the playlist on YouTube</a>
+          <a class="btn secondary" href="https://www.youtube.com/watch?v=3EyweVmmIiQ&amp;list=PLED_7E5wQkhoRqTm6RFFjYwrRh4SE69Zh" target="_blank" rel="noopener">Start with the first video</a>
+        </div>
+      </div>
+
+      <div class="course-block" id="materials">
+        <h2>Course Materials</h2>
+        <p>Course materials are hosted on Google Drive and open in a new tab. Browse the
+        <a href="https://drive.google.com/drive/folders/1Ufm4ox5iNTP0DKOyYUvpm7jg3i8q8YcV?usp=sharing" target="_blank" rel="noopener">whole folder</a>, or pick a file below.</p>
+        <div class="tabs" data-tabs>
+          <div class="tablist" role="tablist" aria-label="Course materials" hidden>
+            <button role="tab" id="tab-slides" aria-controls="panel-slides" aria-selected="true">Slides</button>
+            <button role="tab" id="tab-supp" aria-controls="panel-supp" aria-selected="false" tabindex="-1">Support Material &amp; Workbooks</button>
+            <button role="tab" id="tab-ws" aria-controls="panel-ws" aria-selected="false" tabindex="-1">Worksheets &amp; Past Papers</button>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-slides" aria-labelledby="tab-slides">
+            <h3 class="panel-title">Slides</h3>
+            <ul class="res-list">
+          <li><a href="https://drive.google.com/file/d/19LDT8sjVN0H9du0KtooiGosHtP4D2smL/view" target="_blank" rel="noopener"><span class="res-name">Chapter 1: Binary Systems</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/13sQVYT6hsMQLomnaTPCKcfI0XHnqKOyP/view" target="_blank" rel="noopener"><span class="res-name">Chapter 2: Boolean Algebra &amp; Logic Gates</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1L8pZgZzKqtFCCzTe2eva4Vqi5pvkwnVZ/view" target="_blank" rel="noopener"><span class="res-name">Chapter 3: Gate-Level Minimization</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1W2La6zegvz7CADolcTMjVSmIu0Z2uL9H/view" target="_blank" rel="noopener"><span class="res-name">Chapter 4: Combinational Logic</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1I-wPE5P-1FwNfqyBF4qxNdjxuvJu0c6r/view" target="_blank" rel="noopener"><span class="res-name">Chapter 5: Synchronous Sequential Logic</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1FordmwPX8awPxFKkbQfej0SzdLopk-5q/view" target="_blank" rel="noopener"><span class="res-name">Chapter 6: Registers &amp; Counters</span><span class="res-type">PPT</span></a></li>
+          <li><a href="https://drive.google.com/file/d/17ixRWvd2stjxTLubvpwiSZhbL6FTXDLX/view" target="_blank" rel="noopener"><span class="res-name">Chapter 7: Memory &amp; Programmable Logic</span><span class="res-type">PPT</span></a></li>
+            </ul>
+            <a class="folder-link" href="https://drive.google.com/drive/folders/1B5duKtJv72eT6tbBnzPOHnNdwk3Q7TVb" target="_blank" rel="noopener">Open the Slides folder &rarr;</a>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-supp" aria-labelledby="tab-supp">
+            <h3 class="panel-title">Support Material &amp; Workbooks</h3>
+            <ul class="res-list">
+          <li><a href="https://drive.google.com/file/d/1itqzxtChMJkm-4uz8aCCfjPCndt3B5-I/view" target="_blank" rel="noopener"><span class="res-name">Number Systems, Complements &amp; BCD: A Freshman Workbook</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1oEIMoSMHoZAIgPo5ujZJ8Evzwtob732e/view" target="_blank" rel="noopener"><span class="res-name">Additional Reading: Laws and Theorems of Boolean Algebra</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1ZysAQvuNLZyCLTEl7LSTbDAFjZ9aWSxg/view" target="_blank" rel="noopener"><span class="res-name">Number Systems</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1jMxR3JkoSfJRFmsMGJpUreHM9WtqecTe/view" target="_blank" rel="noopener"><span class="res-name">Logic Gates</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1t8MsumF1NWsaVq8JnVojjJW9m5GBlNgq/view" target="_blank" rel="noopener"><span class="res-name">Logic Circuits</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1Dc0T_ghl0WKC_ErQRcOYNaJL3kgh0GWi/view" target="_blank" rel="noopener"><span class="res-name">Boolean Algebra &amp; DeMorgan&rsquo;s Theorem</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1u8bhRCSc023GCFQegO4ysHGXFwmXiy8y/view" target="_blank" rel="noopener"><span class="res-name">Karnaugh Maps</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1asdAFlPoVMG5_qHtCU6RExXs_PZ-_ZgF/view" target="_blank" rel="noopener"><span class="res-name">Data Control Circuits</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1Fwk170alWTlF9FY42mfrBg7_Nxp1YECJ/view" target="_blank" rel="noopener"><span class="res-name">Flip-Flops</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1uiRzIg8wd3jMIPDjCx35AT0AjhiU1HNN/view" target="_blank" rel="noopener"><span class="res-name">Counter Design</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1b_GxNG9EJt-cQkC9LFGLup2jnZjzGkBW/view" target="_blank" rel="noopener"><span class="res-name">Mini-Project Requirements</span><span class="res-type">PDF</span></a></li>
+            </ul>
+            <a class="folder-link" href="https://drive.google.com/drive/folders/1Y3flAFh_3JNWb8bpF-L6LpLQ-5BFzE2j" target="_blank" rel="noopener">Open the Support Material folder &rarr;</a>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-ws" aria-labelledby="tab-ws">
+            <h3 class="panel-title">Worksheets &amp; Past Papers</h3>
+            <ul class="res-list">
+          <li><a href="https://drive.google.com/file/d/1iNPrgIN_fLMWgcRLIUsfBqr-Le2Nwzxy/view" target="_blank" rel="noopener"><span class="res-name">Worksheet: Chapter 1</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1_qI3GUrQCAo1Bebe2mmGicVEgv4hzgdo/view" target="_blank" rel="noopener"><span class="res-name">Worksheet: Chapter 2</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1RjvUbWuMVH_SRwikjgSS2uuMiWnKdJ0s/view" target="_blank" rel="noopener"><span class="res-name">Worksheet: Chapter 3</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1X2ABXhSxOJakfAzrO_9bw_1bKddO7IfA/view" target="_blank" rel="noopener"><span class="res-name">Worksheet: Chapter 4</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1Mr6TJqWudh69of05aj26LAz1enzSd6VQ/view" target="_blank" rel="noopener"><span class="res-name">Worksheet: Chapter 5</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1oO4s4dc1xFUUXrC_u1yO6yQPWSQL6dqh/view" target="_blank" rel="noopener"><span class="res-name">Worksheet: Chapters 6&ndash;7</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1NOcvwRrJGpFS-COvP6vZjDa0NR5Z62uM/view" target="_blank" rel="noopener"><span class="res-name">First Exam 2017</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/16g9Wffk6Z7tlnjB7qcf237UU6IYdEw1i/view" target="_blank" rel="noopener"><span class="res-name">Second Exam 2018</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/14zWYEZQbeNaQLmwlvStatHXMQKoL7xLa/view" target="_blank" rel="noopener"><span class="res-name">First Midterm 2021/2022</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/110xkfTA7qaFC40JuMNgpcvbutKIEItGf/view" target="_blank" rel="noopener"><span class="res-name">First Midterm 2022/2023</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1ltzJ2B2M6Rw92Y8r5jAqxaN9PdFtgtSW/view" target="_blank" rel="noopener"><span class="res-name">Final Exam 2018</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1xcCKaITRg7C_BwM_qd4xTPYyHCOfqmMS/view" target="_blank" rel="noopener"><span class="res-name">Final Exam 2019</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1ymLcvCWtwNfbb7ft5pm6OTYXhsIAwzBT/view" target="_blank" rel="noopener"><span class="res-name">Final Exam 2022</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1b8L-mU6CBJ95C16SHP6q9PNRVNbZTDBb/view" target="_blank" rel="noopener"><span class="res-name">Final Exam 2023</span><span class="res-type">PDF</span></a></li>
+          <li><a href="https://drive.google.com/file/d/18mr3M8aLqXiJFjO-jcDxC-gXisQDUQze/view" target="_blank" rel="noopener"><span class="res-name">Final Exam Sample</span><span class="res-type">PDF</span></a></li>
+            </ul>
+            <a class="folder-link" href="https://drive.google.com/drive/folders/1dOcKOVKbi1B0tbFUGlariwN6Zisn0Gim" target="_blank" rel="noopener">Open the Worksheets &amp; Past Papers folder &rarr;</a>
+          </div>
+        </div>
+      </div>
     </div>
     <aside class="aside">
       <h4>At a glance</h4>
-      <dl><dt>Instructor</dt><dd>Prof. Esam A. Al-Qaralleh</dd><dt>Department</dt><dd>Computer Engineering, PSUT</dd><dt>Status</dt><dd>Recently taught</dd><dt>Audience</dt><dd>Undergraduate</dd></dl>
+      <a class="quick" href="#lectures">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></span>
+        <span><span class="quick-title">Course Videos</span><span class="quick-sub">Recorded lectures on YouTube</span></span>
+      </a>
+      <a class="quick" href="#materials">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></span>
+        <span><span class="quick-title">Course Material</span><span class="quick-sub">Slides, workbooks and past papers</span></span>
+      </a>
       <a class="back" href="courses.html">&larr; All courses</a>
     </aside>
   </section>
 
-  <section class="section">
-    <div class="callout">
-      <div><h3>Video Demonstrations &amp; Course Playlist</h3><p>Recorded lecture demonstrations, practical laboratory tutorials, and student video presentations.</p></div>
-      <a class="btn" href="https://www.youtube.com/watch?v=3EyweVmmIiQ&amp;list=PLED_7E5wQkhoRqTm6RFFjYwrRh4SE69Zh" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Watch the playlist</a>
-    </div>
-  </section>
-  <section class="section">
-    <div class="pub-toolbar"><h2 style="font-size:28px">Lecture Slides &amp; Chapters</h2><a class="btn" href="https://drive.google.com/drive/folders/1Ufm4ox5iNTP0DKOyYUvpm7jg3i8q8YcV?usp=sharing" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Complete Google Drive folder</a></div>
-    <p style="color:var(--muted);margin-bottom:18px">Presentation files and chapter modules hosted on Google Drive.</p>
-    <div class="table-wrap"><table><thead><tr><th style="width:18%">Chapter</th><th>Summary</th></tr></thead><tbody><tr><td><a href="https://drive.google.com/file/d/19LDT8sjVN0H9du0KtooiGosHtP4D2smL/view?usp=sharing" target="_blank" rel="noopener">Chapter 1</a></td><td><strong>Binary Systems</strong> &mdash; Digital systems, binary numbers, number-base conversions, octal and hexadecimal, complements, signed binary numbers, binary codes and binary logic.</td></tr><tr><td><a href="https://drive.google.com/file/d/13sQVYT6hsMQLomnaTPCKcfI0XHnqKOyP/view?usp=sharing" target="_blank" rel="noopener">Chapter 2</a></td><td><strong>Boolean Algebra &amp; Logic Gates</strong> &mdash; Postulates and theorems of Boolean algebra, Boolean functions, canonical and standard forms, and digital logic gates.</td></tr><tr><td><a href="https://drive.google.com/file/d/1L8pZgZzKqtFCCzTe2eva4Vqi5pvkwnVZ/view?usp=sharing" target="_blank" rel="noopener">Chapter 3</a></td><td><strong>Gate-Level Minimization</strong> &mdash; Karnaugh-map method, product-of-sums simplification, don't-care conditions, and NAND/NOR implementations.</td></tr><tr><td><a href="https://drive.google.com/file/d/1W2La6zegvz7CADolcTMjVSmIu0Z2uL9H/view?usp=sharing" target="_blank" rel="noopener">Chapter 4</a></td><td><strong>Combinational Logic</strong> &mdash; Analysis and design procedures, adders and subtractors, magnitude comparators, decoders, encoders, and multiplexers.</td></tr><tr><td><a href="https://drive.google.com/file/d/1I-wPE5P-1FwNfqyBF4qxNdjxuvJu0c6r/view?usp=sharing" target="_blank" rel="noopener">Chapter 5</a></td><td><strong>Synchronous Sequential Logic</strong> &mdash; Latches and flip-flops, analysis of clocked sequential circuits, state reduction and assignment, and design procedure.</td></tr><tr><td><a href="https://drive.google.com/file/d/1FordmwPX8awPxFKkbQfej0SzdLopk-5q/view?usp=sharing" target="_blank" rel="noopener">Chapter 6</a></td><td><strong>Registers &amp; Counters</strong> &mdash; Registers, shift registers, ripple counters, synchronous counters, and other counter designs.</td></tr><tr><td><a href="https://drive.google.com/file/d/17ixRWvd2stjxTLubvpwiSZhbL6FTXDLX/view?usp=sharing" target="_blank" rel="noopener">Chapter 7</a></td><td><strong>Memory &amp; Programmable Logic</strong> &mdash; Random-access memory, memory decoding, ROM, and programmable logic devices (PLA, PAL).</td></tr></tbody></table></div>
-  </section>
-  <section class="section">
-    <h2 style="font-size:28px;margin-bottom:18px">Additional Course Materials</h2>
-    <div class="cards-2">
-      <a class="hcard" href="https://drive.google.com/drive/folders/1Y3flAFh_3JNWb8bpF-L6LpLQ-5BFzE2j" target="_blank" rel="noopener" style="text-decoration:none"><h3>Support Materials &amp; Workbooks &rarr;</h3><p>Supplementary readings and lab workbooks for the course.</p></a>
-      <a class="hcard" href="https://drive.google.com/drive/folders/1dOcKOVKbi1B0tbFUGlariwN6Zisn0Gim" target="_blank" rel="noopener" style="text-decoration:none"><h3>Worksheets &amp; Past Papers &rarr;</h3><p>Practice worksheets and previous exam papers for revision.</p></a>
-    </div>
-  </section>
 </div>
 </main>
 <footer class="site-footer">
@@ -85,5 +234,39 @@
   </div>
   <div class="copy"><div class="wrap"><span>&copy; 2026 Esam A. Al-Qaralleh</span><span>Princess Sumaya University for Technology</span></div></div>
 </footer>
+<script>
+/* Accessible tabs. Without JavaScript every panel is shown in turn. */
+(function () {
+  document.documentElement.classList.add('js');
+  document.querySelectorAll('[data-tabs]').forEach(function (root) {
+    var list = root.querySelector('[role="tablist"]');
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+    list.hidden = false;
+    function select(i, focus) {
+      tabs.forEach(function (t, j) {
+        var on = i === j;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        panels[j].hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        var k = e.key, n = tabs.length;
+        if (k === 'ArrowRight') select((i + 1) % n, true);
+        else if (k === 'ArrowLeft') select((i - 1 + n) % n, true);
+        else if (k === 'Home') select(0, true);
+        else if (k === 'End') select(n - 1, true);
+        else return;
+        e.preventDefault();
+      });
+    });
+    select(0);
+  });
+})();
+</script>
 </body>
 </html>
