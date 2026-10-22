@@ -186,6 +186,23 @@ details.projects summary small{font:400 13.5px var(--sans);color:var(--muted);ma
 .project a{font-size:13px;color:var(--muted);word-break:break-word}
 .project a:hover{color:var(--link)}
 
+/* ---------- Simulation lab cards ---------- */
+.sim-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.sim-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;color:inherit;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s,border-color .18s}
+.sim-card:hover{text-decoration:none;transform:translateY(-3px);border-color:var(--navy);box-shadow:0 2px 4px rgba(19,41,75,.06),0 18px 36px -16px rgba(19,41,75,.35)}
+.sim-shot{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#e8edf5;border-bottom:1px solid var(--line)}
+.sim-shot img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .35s}
+.sim-card:hover .sim-shot img{transform:scale(1.03)}
+.sim-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:rgba(19,41,75,.92);color:#fff;font:600 14px/1 var(--sans);opacity:0;transition:opacity .18s}
+.sim-play svg{width:16px;height:16px}
+.sim-card:hover .sim-play,.sim-card:focus-visible .sim-play{opacity:1}
+.sim-body{display:block;padding:18px 22px 20px}
+.sim-chip{display:inline-block;font:600 11px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#7b5d1c;background:var(--gold-soft);padding:5px 8px;border-radius:3px;margin-bottom:10px}
+.sim-body h3{font-size:21px;margin-bottom:6px}
+.sim-body p{font-size:15px;color:var(--ink-soft);margin:0 0 12px}
+.sim-body .go{font-size:14px;font-weight:500;color:var(--link)}
+@media (max-width:760px){.sim-grid{grid-template-columns:1fr}.sim-play{opacity:1}}
+
 /* ---------- Publications ---------- */
 .pub-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-bottom:8px}
 .filters{display:flex;flex-wrap:wrap;gap:6px}
