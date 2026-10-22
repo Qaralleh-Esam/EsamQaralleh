@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Embedded Systems Design | Prof. Esam A. Al-Qaralleh</title>
-<meta name="description" content="This course introduces students to the fundamental concepts of embedded systems, focusing on the architecture, programming, and interfacing of microcontroller-based systems. Using PIC microcontrollers, students explore embedded hardware and software design, digital input/output, timers, interrupts, analog-to-digital conversion (ADC), pulse-width modulation (PWM), and serial communication. The course emphasizes practical applications through programming, simulation, and interfacing with sensors, actuators, and motors.">
+<meta name="description" content="This course introduces students to the fundamental concepts of embedded systems, focusing on the architecture, programming, and interfacing of microcontroller-based systems. Using PIC microcontrollers, students explore embedded hardware and software design, digital input/output, timers, interrupts, ">
 <meta name="author" content="Esam A. Al-Qaralleh">
 <meta name="theme-color" content="#13294b">
 <meta property="og:title" content="Embedded Systems Design | Prof. Esam A. Al-Qaralleh">
-<meta property="og:description" content="This course introduces students to the fundamental concepts of embedded systems, focusing on the architecture, programming, and interfacing of microcontroller-based systems. Using PIC microcontrollers, students explore embedded hardware and software design, digital input/output, timers, interrupts, analog-to-digital conversion (ADC), pulse-width modulation (PWM), and serial communication. The course emphasizes practical applications through programming, simulation, and interfacing with sensors, actuators, and motors.">
+<meta property="og:description" content="This course introduces students to the fundamental concepts of embedded systems, focusing on the architecture, programming, and interfacing of microcontroller-based systems. Using PIC microcontrollers, students explore embedded hardware and software design, digital input/output, timers, interrupts, ">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://qaralleh-esam.github.io/EsamQaralleh/embedded-systems.html">
 <meta property="og:url" content="https://qaralleh-esam.github.io/EsamQaralleh/embedded-systems.html">
@@ -16,6 +16,56 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
+<style>
+/* course-page additions: works alongside style.css */
+.course-block{margin-top:2.25rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;margin:1.25rem 0 0;padding:0;list-style:none}
+.facts li{border:1px solid rgba(19,41,75,.15);border-radius:8px;padding:.7rem .85rem;background:rgba(19,41,75,.03)}
+.facts .k{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;opacity:.7}
+.facts .v{display:block;font-weight:600;margin-top:.15rem}
+.weeks{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:.75rem}
+.weeks th,.weeks td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid rgba(19,41,75,.12);vertical-align:top}
+.weeks th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.weeks td:first-child{width:3rem;font-variant-numeric:tabular-nums;font-weight:600}
+.weeks td:nth-child(2){font-weight:600}
+.table-scroll{overflow-x:auto}
+.grading{list-style:none;padding:0;margin:.75rem 0 0}
+.grading li{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;border-bottom:1px solid rgba(19,41,75,.12)}
+.grading b{font-variant-numeric:tabular-nums}
+.video-card{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;border:1px solid rgba(19,41,75,.15);border-radius:10px;padding:1.1rem 1.25rem;margin-top:.75rem;background:rgba(19,41,75,.03)}
+.video-card p{margin:0;flex:1 1 260px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:6px;background:#13294b;color:#fff !important;text-decoration:none;font-weight:600}
+.btn:hover,.btn:focus-visible{background:#1d3d6e}
+.btn.secondary{background:transparent;color:#13294b !important;border:1px solid #13294b}
+.btn svg{width:1.1em;height:1.1em;fill:currentColor}
+.tabs{margin-top:.75rem}
+.tablist{display:flex;flex-wrap:wrap;gap:.25rem;border-bottom:2px solid rgba(19,41,75,.15)}
+.tablist button{font:inherit;font-weight:600;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:.6rem .9rem;cursor:pointer;color:inherit;opacity:.7}
+.tablist button[aria-selected="true"]{border-bottom-color:#13294b;opacity:1}
+.tablist button:focus-visible{outline:2px solid #13294b;outline-offset:2px}
+.tabpanel{padding:1rem 0 0}
+.tabpanel h3{margin-top:0}
+.js .tabpanel h3.panel-title{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.res-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.5rem}
+.res-list a{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.65rem .8rem;border:1px solid rgba(19,41,75,.15);border-radius:6px;text-decoration:none;color:inherit}
+.res-list a:hover,.res-list a:focus-visible{border-color:#13294b;background:rgba(19,41,75,.05)}
+.res-type{flex:none;font-size:.7rem;font-weight:700;letter-spacing:.05em;padding:.15rem .4rem;border-radius:4px;background:rgba(19,41,75,.1)}
+.folder-link{display:inline-block;margin-top:.9rem;font-weight:600}
+.quick{display:flex;align-items:center;gap:.85rem;margin:0 0 .75rem;padding:1rem 1.1rem;border-radius:10px;background:#13294b;color:#fff !important;text-decoration:none;box-shadow:0 2px 6px rgba(19,41,75,.25);transition:transform .15s ease,background .15s ease}
+.quick:hover,.quick:focus-visible{background:#1d3d6e;transform:translateY(-1px)}
+.quick:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.quick-icon{flex:none;display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:8px;background:rgba(255,255,255,.15)}
+.quick-icon svg{width:1.4rem;height:1.4rem;fill:#fff}
+.quick-title{display:block;font-weight:700;font-size:1.05rem;line-height:1.2}
+.quick-sub{display:block;font-size:.85rem;opacity:.85;margin-top:.15rem}
+#lectures,#materials,#simulators{scroll-margin-top:1.5rem}
+.prose .sim-grid{gap:16px}
+.prose .sim-body h3{font-size:19px;margin-top:0}
+.prose .sim-body p{font-size:14.5px}
+#lectures .video-card,#materials .tabs{border-left:4px solid #13294b}
+#materials .tabs{padding-left:1rem}
+.aside .back{display:inline-block;margin-top:.5rem}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -26,38 +76,79 @@
   </nav>
 </header>
 <main id="main">
-
 <section class="pagehead"><div class="wrap">
   <div class="crumbs"><a href="index.html">Home</a><span>/</span><a href="courses.html">Teaching</a><span>/</span>Course</div>
   <span class="eyebrow">Recently taught</span>
   <h1>Embedded Systems Design</h1>
-  <p class="lede">This course introduces students to the fundamental concepts of embedded systems, focusing on the architecture, programming, and interfacing of microcontroller-based systems. Using PIC microcontrollers, students explore embedded hardware and software design, digital input/output, timers, interrupts, analog-to-digital conversion (ADC), pulse-width modulation (PWM), and serial communication. The course emphasizes practical applications through programming, simulation, and interfacing with sensors, actuators, and motors.</p>
+  <p class="lede">Architecture, programming and interfacing of PIC microcontroller-based systems, taught through hands-on, project-based design.</p>
 </div></section>
 <div class="wrap">
   <section class="section detail-grid">
     <div class="prose">
-      <h2>Key Topics</h2>
-      <ul class="topic-list"><li>Microcontroller vs. microprocessor architecture and the PIC 8-bit family.</li><li>Digital I/O, parallel ports, clocking, and switch/LED interfacing.</li><li>Assembly and C (mikroC PRO) programming with MPLAB.</li><li>Interrupts, timers, counters, and Capture/Compare/PWM modules.</li><li>Analog-to-digital conversion and signal conditioning.</li><li>Sensors, displays, keypads, and DC/stepper/servo motor drivers.</li></ul>
-      
-      
-    </div>
-    <aside class="aside">
-      <h4>At a glance</h4>
-      <dl><dt>Instructor</dt><dd>Prof. Esam A. Al-Qaralleh</dd><dt>Department</dt><dd>Computer Engineering, PSUT</dd><dt>Status</dt><dd>Recently taught</dd><dt>Audience</dt><dd>Undergraduate</dd></dl>
-      <a class="back" href="courses.html">&larr; All courses</a>
-    </aside>
-  </section>
-  
-  <section class="section">
-    <div class="callout">
-      <div><h3>Video Demonstrations &amp; Course Playlist</h3><p>Recorded lecture demonstrations, practical laboratory tutorials, and student videos showcasing their hardware&ndash;software embedded prototypes.</p></div>
-      <a class="btn" href="https://www.youtube.com/watch?v=3EyweVmmIiQ&list=PLED_7E5wQkhoRqTm6RFFjYwrRh4SE69Zh" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Watch the playlist</a>
-    </div>
-  </section>
-  <section class="section" id="simulators">
-    <h2 style="font-size:28px;margin-bottom:6px">Interactive Simulation Labs</h2>
-    <p style="color:var(--muted);margin-bottom:22px;max-width:720px">Browser-based, cycle-accurate PIC simulators: write assembly, run or single-step it, and watch the registers, breadboard LEDs, 7-segment display, timer and interrupts update live. No installs needed. Click a lab to open it in a new tab.</p>
-    <div class="sim-grid">
+      <h2>Course Description</h2>
+      <p>This course introduces students to the fundamental concepts of embedded systems, focusing on the architecture, programming, and interfacing of microcontroller-based systems. Using PIC microcontrollers, students explore embedded hardware and software design, digital input/output, timers, interrupts, analog-to-digital conversion (ADC), pulse-width modulation (PWM), and serial communication. The course emphasizes practical applications through programming, simulation, and interfacing with sensors, actuators, and motors.</p>
+      <ul class="facts">
+        <li><span class="k">Level</span><span class="v">Undergraduate</span></li>
+        <li><span class="k">Platform</span><span class="v">PIC 16F84A / 16F877A</span></li>
+        <li><span class="k">Tools</span><span class="v">MPLAB, mikroC PRO</span></li>
+        <li><span class="k">Delivery</span><span class="v">Project-based</span></li>
+      </ul>
+
+      <div class="course-block">
+        <h2>Key Topics</h2>
+        <ol class="topic-list">
+          <li>Microcontroller vs. microprocessor architecture and the PIC 8-bit family.</li>
+          <li>Digital I/O, parallel ports, clocking, and switch/LED interfacing.</li>
+          <li>Assembly and C (mikroC PRO) programming with MPLAB.</li>
+          <li>Interrupts, timers, counters, and Capture/Compare/PWM modules.</li>
+          <li>Analog-to-digital conversion and signal conditioning.</li>
+          <li>Sensors, displays, keypads, and DC/stepper/servo motor drivers.</li>
+        </ol>
+      </div>
+
+      <div class="course-block">
+        <h2>Topics Covered</h2>
+        <div class="table-scroll">
+        <table class="weeks">
+          <thead><tr><th scope="col">Ch.</th><th scope="col">Topic</th><th scope="col">Content</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Introduction to Embedded Systems</td><td>Microcontroller vs. microprocessor architecture, semiconductor memory technologies (SRAM, ROM, Flash), computer organization, and 8-bit PIC microcontroller family overview.</td></tr>
+            <tr><td>2</td><td>PIC Mid-Range Family & 16F84A Architecture</td><td>Program and data memory structure, status registers, Special Function Registers (SFRs), banked RAM addressing, and configuration word settings.</td></tr>
+            <tr><td>3</td><td>Parallel Ports, Power Supply, & Clock Oscillators</td><td>Port A/B electrical characteristics, push-pull vs. open-drain outputs, switch/LED interfacing, pull-up resistors, and RC/crystal clock oscillators.</td></tr>
+            <tr><td>4</td><td>Starting to Program – Introduction to Assembler</td><td>Software development cycle, PIC 16 instruction set, MPLAB IDE, MPASM assembler, software simulation with MPSIM, and downloading code to hardware.</td></tr>
+            <tr><td>5</td><td>Building Assembler Programs</td><td>Flowcharts/state diagrams, conditional branching, subroutines, software delay generation, bitwise logical instructions, look-up tables (retlw/addwf PCL), macros, and mikroC PRO.</td></tr>
+            <tr><td>6</td><td>Interrupts, Counters, & Timers</td><td>Hardware interrupt processing (INTCON, ISR, context saving, critical regions), Timer 0 (TMR0) module, prescalers, hardware delay loops, and Sleep mode.</td></tr>
+            <tr><td>7</td><td>Larger Systems & PIC 16F873A/16F874A/16F877A</td><td>Program memory paging (PCLATH), expanded I/O ports (Ports A–E), peripheral allocation, and system testing/diagnostic tools (emulators, debuggers).</td></tr>
+            <tr><td>8</td><td>Human & Physical Interfaces</td><td>Matrix keypads, 7-segment display multiplexing, switch debouncing, sensors (optical, ultrasonic, Hall effect, temperature), and motor drivers (DC, H-bridge, stepper, servo).</td></tr>
+            <tr><td>9</td><td>Taking Timing Further</td><td>Advanced timing features including 16-bit Timer 1, 8-bit Timer 2 (with PR2 period register and postscalers), and Capture/Compare/PWM (CCP) hardware modules.</td></tr>
+            <tr><td>11</td><td>Data Acquisition & Manipulation</td><td>Analog-to-Digital Converters (ADC characteristics, step size, resolution), signal conditioning, voltage scaling/translation circuits, analog multiplexing, and comparators.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="course-block">
+        <h2>Textbook</h2>
+        <ul class="topic-list">
+          <li>Tim Wilmshurst, <em>Designing Embedded Systems with PIC Microcontrollers: Principles and Applications</em>, Newnes.</li>
+        </ul>
+      </div>
+
+      <div class="course-block" id="lectures">
+        <h2>Video Lectures</h2>
+        <div class="video-card">
+          <p>Recorded lecture demonstrations, practical laboratory tutorials, and student videos showcasing their hardware&ndash;software embedded prototypes.</p>
+          <a class="btn" href="https://www.youtube.com/playlist?list=PLED_7E5wQkhoRqTm6RFFjYwrRh4SE69Zh" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            Open the playlist on YouTube</a>
+          <a class="btn secondary" href="https://www.youtube.com/watch?v=3EyweVmmIiQ&amp;list=PLED_7E5wQkhoRqTm6RFFjYwrRh4SE69Zh" target="_blank" rel="noopener">Start with the first video</a>
+        </div>
+      </div>
+
+      <div class="course-block" id="simulators">
+        <h2>Interactive Simulation Labs</h2>
+        <p>Browser-based, cycle-accurate PIC simulators: write assembly, run or single-step it, and watch the registers, breadboard LEDs, 7-segment display, timer and interrupts update live. Click a lab to open it in a new tab.</p>
+        <div class="sim-grid">
       <a class="sim-card" href="https://qaralleh-esam.github.io/Embedded-Systems-/PIC16F84A_Simulation_Lab.html" target="_blank" rel="noopener" aria-label="Open the PIC16F84A Simulation Lab in a new tab">
         <span class="sim-shot"><img src="images/pic16f84a-simulation-lab.jpg" alt="Screenshot of the PIC16F84A Simulation Lab" width="960" height="600" loading="lazy"><span class="sim-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Launch simulator</span></span>
         <span class="sim-body"><span class="sim-chip">18-pin · 2 banks · 1K×14 Flash</span><h3>PIC16F84A Simulation Lab</h3><p>The classic 18-pin PIC used throughout the course: PORTA/PORTB, TMR0, the RB0/INT interrupt and bank switching.</p><span class="go">Open in a new tab &#8599;</span></span>
@@ -67,19 +158,114 @@
         <span class="sim-body"><span class="sim-chip">40-pin · 4 banks · 8K×14 Flash</span><h3>PIC16F877 Simulation Lab</h3><p>The larger 40-pin device with PORTA&ndash;PORTE, four register banks and a logic analyzer for tracing any pin.</p><span class="go">Open in a new tab &#8599;</span></span>
       </a>
     </div>
-    <p style="font-size:13.5px;color:var(--muted);margin-top:14px">Source code: <a href="https://github.com/Qaralleh-Esam/Embedded-Systems-" target="_blank" rel="noopener">Qaralleh-Esam/Embedded-Systems-</a> on GitHub.</p>
+        <p style="font-size:13.5px;color:var(--muted);margin-top:14px">Source code: <a href="https://github.com/Qaralleh-Esam/Embedded-Systems-" target="_blank" rel="noopener">Qaralleh-Esam/Embedded-Systems-</a> on GitHub.</p>
+      </div>
+
+      <div class="course-block" id="materials">
+        <h2>Course Materials</h2>
+        <p>Slides are hosted on Google Drive and open in a new tab. Browse the
+        <a href="https://drive.google.com/drive/folders/1O5dlMg_ADdRxGaOtmUbq1sXTURkYWlfr?usp=drive_link" target="_blank" rel="noopener">whole folder</a>, or pick a file below. Student project repositories are on GitHub.</p>
+        <div class="tabs" data-tabs>
+          <div class="tablist" role="tablist" aria-label="Course materials" hidden>
+            <button role="tab" id="tab-slides" aria-controls="panel-slides" aria-selected="true">Slides</button>
+            <button role="tab" id="tab-proj" aria-controls="panel-proj" aria-selected="false" tabindex="-1">Student Projects (54)</button>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-slides" aria-labelledby="tab-slides">
+            <h3 class="panel-title">Slides</h3>
+            <ul class="res-list">
+          <li><a href="https://docs.google.com/presentation/d/1OPmVpOHzb1WimiJjVWq5qnXbRcfOwKmM/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 1: Introduction to Embedded Systems</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1bzQxXFLYLhnHUQ8CRrhcKTf-urWd3eCL/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 2: PIC Mid-Range Family & 16F84A Architecture</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1N1uPwZETWaeUSmm7Dr5kk7OudxquC73L/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 3: Parallel Ports, Power Supply, & Clock Oscillators</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1c_cUamcGYz2odaWgLoaBDeN0dVJkBTjk/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 4: Starting to Program – Introduction to Assembler</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1vJ4GH7qyz7YBD2Saw8qxRVlr8yghB3DG/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 5: Building Assembler Programs</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1tw7I-aPZ8saMNsj6lN2ZagxyvZEu4B3Y/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 6: Interrupts, Counters, & Timers</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1dXUMVAybtyfMK3OjVeBBpYUdiuUST1mk/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 7: Larger Systems & PIC 16F873A/16F874A/16F877A</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1prumNnXTCe6yXt1ynDjMxoM5vLZ6j3Ry/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 8: Human & Physical Interfaces</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/14gn_KrNL7VpUexcftH-dvz0z-CYiNz16/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 9: Taking Timing Further</span><span class="res-type">PPTX</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1kRWFLus5qh22zdXEGPmkeVfqx3qsFapn/edit?usp=drive_link" target="_blank" rel="noopener"><span class="res-name">Chapter 11: Data Acquisition & Manipulation</span><span class="res-type">PPTX</span></a></li>
+            </ul>
+            <a class="folder-link" href="https://drive.google.com/drive/folders/1O5dlMg_ADdRxGaOtmUbq1sXTURkYWlfr?usp=drive_link" target="_blank" rel="noopener">Open the Slides folder &rarr;</a>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-proj" aria-labelledby="tab-proj">
+            <h3 class="panel-title">Student Projects</h3>
+            <ul class="res-list">
+          <li><a href="https://github.com/Tarawnah/Fire-Fighter-Robot.git" target="_blank" rel="noopener"><span class="res-name">Fire Fighter Robot</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/ahmadkhawaj/Embedded-Systems-project" target="_blank" rel="noopener"><span class="res-name">Embedded Systems Project</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/AhmadAlsharif/Wearable-Infant-Positioning-Monitoring-System" target="_blank" rel="noopener"><span class="res-name">Wearable Infant Positioning & Monitoring</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/dialasai/Smart-Home-Automation-System/tree/main" target="_blank" rel="noopener"><span class="res-name">Smart Home Automation System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/osama-jaber/Coffee_Machine" target="_blank" rel="noopener"><span class="res-name">Coffee Machine Controller</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Qutaiba3397/Obstacle-Removing-Robot" target="_blank" rel="noopener"><span class="res-name">Obstacle Removing Robot</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Waleed7212003qasem/Smart-Room-.git" target="_blank" rel="noopener"><span class="res-name">Smart Room Automation</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/EmanOdeh20170282/Football-court-" target="_blank" rel="noopener"><span class="res-name">Football Court Lighting & Scoreboard</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/ahmadmelhempsut/card_dealer_psut_group24" target="_blank" rel="noopener"><span class="res-name">Automated Card Dealer</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Basilmmn/Embedded-Project-Fall-2023" target="_blank" rel="noopener"><span class="res-name">Embedded Project (Fall 2023)</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Taimaa-Khallad/Embedded-Systems-POV-ACLK" target="_blank" rel="noopener"><span class="res-name">POV Analog/Digital Clock</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/halamoh5/Embedded-Project" target="_blank" rel="noopener"><span class="res-name">Embedded System Controller</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/hamzehmashal/embedded-project" target="_blank" rel="noopener"><span class="res-name">Embedded Hardware Project</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/abuba6arseh/Embedded-project---Raed-Batarseh-hamzeh-aqqad-dania-slehat.git" target="_blank" rel="noopener"><span class="res-name">Multi-Sensor Embedded System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Mr3bd/PSUT-Embedded-Fire-Fighting" target="_blank" rel="noopener"><span class="res-name">PSUT Embedded Fire Fighting</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/AbdullaMomani/3D-Scanner/tree/main" target="_blank" rel="noopener"><span class="res-name">Embedded 3D Scanner</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/IsamKaraman/PSUT-Embeded-systems-Smart-Irrigation-system-/tree/main" target="_blank" rel="noopener"><span class="res-name">Smart Irrigation System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Darthohh/Mobile-Automated-Fire-Fighting-Car-" target="_blank" rel="noopener"><span class="res-name">Mobile Automated Fire Fighting Car</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/omarrrefai/smart-home-embedded-system" target="_blank" rel="noopener"><span class="res-name">Smart Home Embedded System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/OmarQinna/Secure_Door_Final_Design" target="_blank" rel="noopener"><span class="res-name">Secure Door Lock Design</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/mariaaldweik/Embedded-Blind-Stick/tree/main/Blind%20Stick" target="_blank" rel="noopener"><span class="res-name">Smart Blind Stick Device</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/BaderUnsal/Missile-defence-system" target="_blank" rel="noopener"><span class="res-name">Missile Defence Target System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/ghanemfaouri/Automated-Mop-Cleaner" target="_blank" rel="noopener"><span class="res-name">Automated Mop Cleaner</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/63ani/ACBS/tree/main" target="_blank" rel="noopener"><span class="res-name">Automated Car Braking System (ACBS)</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Inshasi/Sumo_PICwarrior/blob/main/README.md" target="_blank" rel="noopener"><span class="res-name">Sumo PIC Warrior Robot</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Maenamer2/smartplantpot_embd" target="_blank" rel="noopener"><span class="res-name">Smart Plant Pot System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/yazantariq/Home-Security-System" target="_blank" rel="noopener"><span class="res-name">Home Security System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/eidmaghareez/Smart-Gate-Embedded-project.git" target="_blank" rel="noopener"><span class="res-name">Smart Gate Control System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Cyb3rW1z/Fire-Alarm-using-16F877A-PIC" target="_blank" rel="noopener"><span class="res-name">PIC16F877A Fire Alarm</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/os3toum109/MOA-Irrigation_System.git" target="_blank" rel="noopener"><span class="res-name">MOA Automated Irrigation</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Liyankd/Smart_Pill_Dispenser" target="_blank" rel="noopener"><span class="res-name">Smart Pill Dispenser</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/SereenAlKedra/Car-Speed-Tracking-Embedded-Project.git" target="_blank" rel="noopener"><span class="res-name">Car Speed Tracking System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/abdulazizabusaada/PetFeedingMachine" target="_blank" rel="noopener"><span class="res-name">Pet Feeding Machine</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/JamalAlHijawi/Automated-mop-cleaner-pic-16f877A.git" target="_blank" rel="noopener"><span class="res-name">PIC16F877A Mop Cleaner</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/judehourani/digital-piggy-bank" target="_blank" rel="noopener"><span class="res-name">Digital Piggy Bank</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Ehabo22/SmartTank/tree/main" target="_blank" rel="noopener"><span class="res-name">Smart Tank Level Monitor</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Issajuha1/BMI" target="_blank" rel="noopener"><span class="res-name">Embedded BMI Health Calculator</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/rahafhattabb/vending" target="_blank" rel="noopener"><span class="res-name">Microcontroller Vending Machine</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/KA1OKEN/Embedded-Systems-Project-Autonomous-Pinball-Machine" target="_blank" rel="noopener"><span class="res-name">Autonomous Pinball Machine</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/lesoldatfidele/4x4x4-LED-Cube" target="_blank" rel="noopener"><span class="res-name">4x4x4 LED Cube Display</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/omargamm/guard-car.git" target="_blank" rel="noopener"><span class="res-name">Guard Car Robot</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Bulbullaith/Embedded-project-sensored-bulldozer-.git" target="_blank" rel="noopener"><span class="res-name">Sensored Bulldozer Robot</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/LunarSalameh/Embedded-System-Elevator-" target="_blank" rel="noopener"><span class="res-name">Microcontroller Elevator System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/laithabdeen/embedded-line-following-car" target="_blank" rel="noopener"><span class="res-name">Embedded Line Following Car</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/oramadn/SmartTrafficLight" target="_blank" rel="noopener"><span class="res-name">Smart Traffic Light Controller</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Sha6al/GreenHouseIoT.git" target="_blank" rel="noopener"><span class="res-name">GreenHouse IoT Control System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/mwalla10/laser_shooting_game" target="_blank" rel="noopener"><span class="res-name">Interactive Laser Shooting Game</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/Yazan-Masalha/SmartFireAlarm" target="_blank" rel="noopener"><span class="res-name">Smart Fire Alarm System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/YousefDro/embedded-crane-project" target="_blank" rel="noopener"><span class="res-name">Embedded Crane Mechanism</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/laithabdeen/Robocar---Embedded-Project" target="_blank" rel="noopener"><span class="res-name">Robocar Embedded Controller</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/abujumaa/Embedded-Systems-Project-GreenHouse-Control-System" target="_blank" rel="noopener"><span class="res-name">GreenHouse Control System</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/scrimpysmile/auto-filling" target="_blank" rel="noopener"><span class="res-name">Auto-Filling Liquid Dispenser</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/TarekSalameh12/Vending-machine-using-16f877A-Microcontroller" target="_blank" rel="noopener"><span class="res-name">16F877A Vending Machine</span><span class="res-type">GITHUB</span></a></li>
+          <li><a href="https://github.com/SanadMehyar/Smart-Conditioning-System#smart-conditioning-system" target="_blank" rel="noopener"><span class="res-name">Smart Air Conditioning System</span><span class="res-type">GITHUB</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="aside">
+      <h4>At a glance</h4>
+      <a class="quick" href="#lectures">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></span>
+        <span><span class="quick-title">Course Videos</span><span class="quick-sub">Recorded lectures on YouTube</span></span>
+      </a>
+      <a class="quick" href="#simulators">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 2v2H7a3 3 0 0 0-3 3v2H2v2h2v2H2v2h2v2a3 3 0 0 0 3 3h2v2h2v-2h2v2h2v-2h2a3 3 0 0 0 3-3v-2h2v-2h-2v-2h2V9h-2V7a3 3 0 0 0-3-3h-2V2h-2v2h-2V2H9zm-1 6h8v8H8V8z"/></svg></span>
+        <span><span class="quick-title">Simulation Labs</span><span class="quick-sub">PIC16F84A &amp; PIC16F877 in the browser</span></span>
+      </a>
+      <a class="quick" href="#materials">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></span>
+        <span><span class="quick-title">Course Material</span><span class="quick-sub">Slides and student projects</span></span>
+      </a>
+      <a class="back" href="courses.html">&larr; All courses</a>
+    </aside>
   </section>
-  <section class="section">
-    <div class="pub-toolbar"><h2 style="font-size:28px">Lecture Slides &amp; Chapters</h2><a class="btn" href="https://drive.google.com/drive/folders/1O5dlMg_ADdRxGaOtmUbq1sXTURkYWlfr?usp=drive_link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Complete Google Drive folder</a></div>
-    <p style="color:var(--muted);margin-bottom:18px">Presentation files and chapter modules hosted on Google Drive.</p>
-    <div class="table-wrap"><table><thead><tr><th style="width:18%">Chapter</th><th>Summary</th></tr></thead><tbody><tr><td><a href="https://docs.google.com/presentation/d/1OPmVpOHzb1WimiJjVWq5qnXbRcfOwKmM/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 1</a></td><td><strong>Introduction to Embedded Systems</strong> &mdash; Microcontroller vs. microprocessor architecture, semiconductor memory technologies (SRAM, ROM, Flash), computer organization, and 8-bit PIC microcontroller family overview.</td></tr><tr><td><a href="https://docs.google.com/presentation/d/1bzQxXFLYLhnHUQ8CRrhcKTf-urWd3eCL/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 2</a></td><td><strong>PIC Mid-Range Family & 16F84A Architecture</strong> &mdash; Program and data memory structure, status registers, Special Function Registers (SFRs), banked RAM addressing, and configuration word settings.</td></tr><tr><td><a href="https://docs.google.com/presentation/d/1N1uPwZETWaeUSmm7Dr5kk7OudxquC73L/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 3</a></td><td><strong>Parallel Ports, Power Supply, & Clock Oscillators</strong> &mdash; Port A/B electrical characteristics, push-pull vs. open-drain outputs, switch/LED interfacing, pull-up resistors, and RC/crystal clock oscillators.</td></tr><tr><td><a href="https://docs.google.com/presentation/d/1c_cUamcGYz2odaWgLoaBDeN0dVJkBTjk/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 4</a></td><td><strong>Starting to Program – Introduction to Assembler</strong> &mdash; Software development cycle, PIC 16 instruction set, MPLAB IDE, MPASM assembler, software simulation with MPSIM, and downloading code to hardware.</td></tr><tr><td><a href="https://docs.google.com/presentation/d/1vJ4GH7qyz7YBD2Saw8qxRVlr8yghB3DG/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 5</a></td><td><strong>Building Assembler Programs</strong> &mdash; Flowcharts/state diagrams, conditional branching, subroutines, software delay generation, bitwise logical instructions, look-up tables (retlw/addwf PCL), macros, and mikroC PRO.</td></tr><tr><td><a href="https://docs.google.com/presentation/d/1tw7I-aPZ8saMNsj6lN2ZagxyvZEu4B3Y/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 6</a></td><td><strong>Interrupts, Counters, & Timers</strong> &mdash; Hardware interrupt processing (INTCON, ISR, context saving, critical regions), Timer 0 (TMR0) module, prescalers, hardware delay loops, and Sleep mode.</td></tr><tr><td><a href="https://docs.google.com/presentation/d/1dXUMVAybtyfMK3OjVeBBpYUdiuUST1mk/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 7</a></td><td><strong>Larger Systems & PIC 16F873A/16F874A/16F877A</strong> &mdash; Program memory paging (PCLATH), expanded I/O ports (Ports A–E), peripheral allocation, and system testing/diagnostic tools (emulators, debuggers).</td></tr><tr><td><a href="https://docs.google.com/presentation/d/1prumNnXTCe6yXt1ynDjMxoM5vLZ6j3Ry/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 8</a></td><td><strong>Human & Physical Interfaces</strong> &mdash; Matrix keypads, 7-segment display multiplexing, switch debouncing, sensors (optical, ultrasonic, Hall effect, temperature), and motor drivers (DC, H-bridge, stepper, servo).</td></tr><tr><td><a href="https://docs.google.com/presentation/d/14gn_KrNL7VpUexcftH-dvz0z-CYiNz16/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 9</a></td><td><strong>Taking Timing Further</strong> &mdash; Advanced timing features including 16-bit Timer 1, 8-bit Timer 2 (with PR2 period register and postscalers), and Capture/Compare/PWM (CCP) hardware modules.</td></tr><tr><td><a href="https://docs.google.com/presentation/d/1kRWFLus5qh22zdXEGPmkeVfqx3qsFapn/edit?usp=drive_link" target="_blank" rel="noopener">Chapter 11</a></td><td><strong>Data Acquisition & Manipulation</strong> &mdash; Analog-to-Digital Converters (ADC characteristics, step size, resolution), signal conditioning, voltage scaling/translation circuits, analog multiplexing, and comparators.</td></tr></tbody></table></div>
-  </section>
-  <section class="section">
-    <details class="projects">
-      <summary><span>Student Projects &amp; Repositories<small>54 projects</small></span></summary>
-      <div class="project-grid"><div class="project"><h4>Fire Fighter Robot</h4><a href="https://github.com/Tarawnah/Fire-Fighter-Robot.git" target="_blank" rel="noopener">Tarawnah/Fire-Fighter-Robot</a></div><div class="project"><h4>Embedded Systems Project</h4><a href="https://github.com/ahmadkhawaj/Embedded-Systems-project" target="_blank" rel="noopener">ahmadkhawaj/Embedded-Systems-project</a></div><div class="project"><h4>Wearable Infant Positioning & Monitoring</h4><a href="https://github.com/AhmadAlsharif/Wearable-Infant-Positioning-Monitoring-System" target="_blank" rel="noopener">AhmadAlsharif/Wearable-Infant-Positioning</a></div><div class="project"><h4>Smart Home Automation System</h4><a href="https://github.com/dialasai/Smart-Home-Automation-System/tree/main" target="_blank" rel="noopener">dialasai/Smart-Home-Automation-System</a></div><div class="project"><h4>Coffee Machine Controller</h4><a href="https://github.com/osama-jaber/Coffee_Machine" target="_blank" rel="noopener">osama-jaber/Coffee_Machine</a></div><div class="project"><h4>Obstacle Removing Robot</h4><a href="https://github.com/Qutaiba3397/Obstacle-Removing-Robot" target="_blank" rel="noopener">Qutaiba3397/Obstacle-Removing-Robot</a></div><div class="project"><h4>Smart Room Automation</h4><a href="https://github.com/Waleed7212003qasem/Smart-Room-.git" target="_blank" rel="noopener">Waleed7212003qasem/Smart-Room</a></div><div class="project"><h4>Football Court Lighting & Scoreboard</h4><a href="https://github.com/EmanOdeh20170282/Football-court-" target="_blank" rel="noopener">EmanOdeh20170282/Football-court</a></div><div class="project"><h4>Automated Card Dealer</h4><a href="https://github.com/ahmadmelhempsut/card_dealer_psut_group24" target="_blank" rel="noopener">ahmadmelhempsut/card_dealer</a></div><div class="project"><h4>Embedded Project (Fall 2023)</h4><a href="https://github.com/Basilmmn/Embedded-Project-Fall-2023" target="_blank" rel="noopener">Basilmmn/Embedded-Project-Fall-2023</a></div><div class="project"><h4>POV Analog/Digital Clock</h4><a href="https://github.com/Taimaa-Khallad/Embedded-Systems-POV-ACLK" target="_blank" rel="noopener">Taimaa-Khallad/Embedded-Systems-POV-ACLK</a></div><div class="project"><h4>Embedded System Controller</h4><a href="https://github.com/halamoh5/Embedded-Project" target="_blank" rel="noopener">halamoh5/Embedded-Project</a></div><div class="project"><h4>Embedded Hardware Project</h4><a href="https://github.com/hamzehmashal/embedded-project" target="_blank" rel="noopener">hamzehmashal/embedded-project</a></div><div class="project"><h4>Multi-Sensor Embedded System</h4><a href="https://github.com/abuba6arseh/Embedded-project---Raed-Batarseh-hamzeh-aqqad-dania-slehat.git" target="_blank" rel="noopener">abuba6arseh/Embedded-project</a></div><div class="project"><h4>PSUT Embedded Fire Fighting</h4><a href="https://github.com/Mr3bd/PSUT-Embedded-Fire-Fighting" target="_blank" rel="noopener">Mr3bd/PSUT-Embedded-Fire-Fighting</a></div><div class="project"><h4>Embedded 3D Scanner</h4><a href="https://github.com/AbdullaMomani/3D-Scanner/tree/main" target="_blank" rel="noopener">AbdullaMomani/3D-Scanner</a></div><div class="project"><h4>Smart Irrigation System</h4><a href="https://github.com/IsamKaraman/PSUT-Embeded-systems-Smart-Irrigation-system-/tree/main" target="_blank" rel="noopener">IsamKaraman/Smart-Irrigation-system</a></div><div class="project"><h4>Mobile Automated Fire Fighting Car</h4><a href="https://github.com/Darthohh/Mobile-Automated-Fire-Fighting-Car-" target="_blank" rel="noopener">Darthohh/Mobile-Automated-Fire-Fighting-Car</a></div><div class="project"><h4>Smart Home Embedded System</h4><a href="https://github.com/omarrrefai/smart-home-embedded-system" target="_blank" rel="noopener">omarrrefai/smart-home-embedded-system</a></div><div class="project"><h4>Secure Door Lock Design</h4><a href="https://github.com/OmarQinna/Secure_Door_Final_Design" target="_blank" rel="noopener">OmarQinna/Secure_Door_Final_Design</a></div><div class="project"><h4>Smart Blind Stick Device</h4><a href="https://github.com/mariaaldweik/Embedded-Blind-Stick/tree/main/Blind%20Stick" target="_blank" rel="noopener">mariaaldweik/Embedded-Blind-Stick</a></div><div class="project"><h4>Missile Defence Target System</h4><a href="https://github.com/BaderUnsal/Missile-defence-system" target="_blank" rel="noopener">BaderUnsal/Missile-defence-system</a></div><div class="project"><h4>Automated Mop Cleaner</h4><a href="https://github.com/ghanemfaouri/Automated-Mop-Cleaner" target="_blank" rel="noopener">ghanemfaouri/Automated-Mop-Cleaner</a></div><div class="project"><h4>Automated Car Braking System (ACBS)</h4><a href="https://github.com/63ani/ACBS/tree/main" target="_blank" rel="noopener">63ani/ACBS</a></div><div class="project"><h4>Sumo PIC Warrior Robot</h4><a href="https://github.com/Inshasi/Sumo_PICwarrior/blob/main/README.md" target="_blank" rel="noopener">Inshasi/Sumo_PICwarrior</a></div><div class="project"><h4>Smart Plant Pot System</h4><a href="https://github.com/Maenamer2/smartplantpot_embd" target="_blank" rel="noopener">Maenamer2/smartplantpot_embd</a></div><div class="project"><h4>Home Security System</h4><a href="https://github.com/yazantariq/Home-Security-System" target="_blank" rel="noopener">yazantariq/Home-Security-System</a></div><div class="project"><h4>Smart Gate Control System</h4><a href="https://github.com/eidmaghareez/Smart-Gate-Embedded-project.git" target="_blank" rel="noopener">eidmaghareez/Smart-Gate-Embedded-project</a></div><div class="project"><h4>PIC16F877A Fire Alarm</h4><a href="https://github.com/Cyb3rW1z/Fire-Alarm-using-16F877A-PIC" target="_blank" rel="noopener">Cyb3rW1z/Fire-Alarm-using-16F877A-PIC</a></div><div class="project"><h4>MOA Automated Irrigation</h4><a href="https://github.com/os3toum109/MOA-Irrigation_System.git" target="_blank" rel="noopener">os3toum109/MOA-Irrigation_System</a></div><div class="project"><h4>Smart Pill Dispenser</h4><a href="https://github.com/Liyankd/Smart_Pill_Dispenser" target="_blank" rel="noopener">Liyankd/Smart_Pill_Dispenser</a></div><div class="project"><h4>Car Speed Tracking System</h4><a href="https://github.com/SereenAlKedra/Car-Speed-Tracking-Embedded-Project.git" target="_blank" rel="noopener">SereenAlKedra/Car-Speed-Tracking</a></div><div class="project"><h4>Pet Feeding Machine</h4><a href="https://github.com/abdulazizabusaada/PetFeedingMachine" target="_blank" rel="noopener">abdulazizabusaada/PetFeedingMachine</a></div><div class="project"><h4>PIC16F877A Mop Cleaner</h4><a href="https://github.com/JamalAlHijawi/Automated-mop-cleaner-pic-16f877A.git" target="_blank" rel="noopener">JamalAlHijawi/Automated-mop-cleaner</a></div><div class="project"><h4>Digital Piggy Bank</h4><a href="https://github.com/judehourani/digital-piggy-bank" target="_blank" rel="noopener">judehourani/digital-piggy-bank</a></div><div class="project"><h4>Smart Tank Level Monitor</h4><a href="https://github.com/Ehabo22/SmartTank/tree/main" target="_blank" rel="noopener">Ehabo22/SmartTank</a></div><div class="project"><h4>Embedded BMI Health Calculator</h4><a href="https://github.com/Issajuha1/BMI" target="_blank" rel="noopener">Issajuha1/BMI</a></div><div class="project"><h4>Microcontroller Vending Machine</h4><a href="https://github.com/rahafhattabb/vending" target="_blank" rel="noopener">rahafhattabb/vending</a></div><div class="project"><h4>Autonomous Pinball Machine</h4><a href="https://github.com/KA1OKEN/Embedded-Systems-Project-Autonomous-Pinball-Machine" target="_blank" rel="noopener">KA1OKEN/Autonomous-Pinball-Machine</a></div><div class="project"><h4>4x4x4 LED Cube Display</h4><a href="https://github.com/lesoldatfidele/4x4x4-LED-Cube" target="_blank" rel="noopener">lesoldatfidele/4x4x4-LED-Cube</a></div><div class="project"><h4>Guard Car Robot</h4><a href="https://github.com/omargamm/guard-car.git" target="_blank" rel="noopener">omargamm/guard-car</a></div><div class="project"><h4>Sensored Bulldozer Robot</h4><a href="https://github.com/Bulbullaith/Embedded-project-sensored-bulldozer-.git" target="_blank" rel="noopener">Bulbullaith/Sensored-Bulldozer</a></div><div class="project"><h4>Microcontroller Elevator System</h4><a href="https://github.com/LunarSalameh/Embedded-System-Elevator-" target="_blank" rel="noopener">LunarSalameh/Embedded-System-Elevator</a></div><div class="project"><h4>Embedded Line Following Car</h4><a href="https://github.com/laithabdeen/embedded-line-following-car" target="_blank" rel="noopener">laithabdeen/embedded-line-following-car</a></div><div class="project"><h4>Smart Traffic Light Controller</h4><a href="https://github.com/oramadn/SmartTrafficLight" target="_blank" rel="noopener">oramadn/SmartTrafficLight</a></div><div class="project"><h4>GreenHouse IoT Control System</h4><a href="https://github.com/Sha6al/GreenHouseIoT.git" target="_blank" rel="noopener">Sha6al/GreenHouseIoT</a></div><div class="project"><h4>Interactive Laser Shooting Game</h4><a href="https://github.com/mwalla10/laser_shooting_game" target="_blank" rel="noopener">mwalla10/laser_shooting_game</a></div><div class="project"><h4>Smart Fire Alarm System</h4><a href="https://github.com/Yazan-Masalha/SmartFireAlarm" target="_blank" rel="noopener">Yazan-Masalha/SmartFireAlarm</a></div><div class="project"><h4>Embedded Crane Mechanism</h4><a href="https://github.com/YousefDro/embedded-crane-project" target="_blank" rel="noopener">YousefDro/embedded-crane-project</a></div><div class="project"><h4>Robocar Embedded Controller</h4><a href="https://github.com/laithabdeen/Robocar---Embedded-Project" target="_blank" rel="noopener">laithabdeen/Robocar-Embedded-Project</a></div><div class="project"><h4>GreenHouse Control System</h4><a href="https://github.com/abujumaa/Embedded-Systems-Project-GreenHouse-Control-System" target="_blank" rel="noopener">abujumaa/GreenHouse-Control-System</a></div><div class="project"><h4>Auto-Filling Liquid Dispenser</h4><a href="https://github.com/scrimpysmile/auto-filling" target="_blank" rel="noopener">scrimpysmile/auto-filling</a></div><div class="project"><h4>16F877A Vending Machine</h4><a href="https://github.com/TarekSalameh12/Vending-machine-using-16f877A-Microcontroller" target="_blank" rel="noopener">TarekSalameh12/Vending-machine</a></div><div class="project"><h4>Smart Air Conditioning System</h4><a href="https://github.com/SanadMehyar/Smart-Conditioning-System#smart-conditioning-system" target="_blank" rel="noopener">SanadMehyar/Smart-Conditioning-System</a></div></div>
-    </details>
-  </section>
+
 </div>
 </main>
 <footer class="site-footer">
@@ -101,5 +287,39 @@
   </div>
   <div class="copy"><div class="wrap"><span>&copy; 2026 Esam A. Al-Qaralleh</span><span>Princess Sumaya University for Technology</span></div></div>
 </footer>
+<script>
+/* Accessible tabs. Without JavaScript every panel is shown in turn. */
+(function () {
+  document.documentElement.classList.add('js');
+  document.querySelectorAll('[data-tabs]').forEach(function (root) {
+    var list = root.querySelector('[role="tablist"]');
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+    list.hidden = false;
+    function select(i, focus) {
+      tabs.forEach(function (t, j) {
+        var on = i === j;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        panels[j].hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        var k = e.key, n = tabs.length;
+        if (k === 'ArrowRight') select((i + 1) % n, true);
+        else if (k === 'ArrowLeft') select((i - 1 + n) % n, true);
+        else if (k === 'Home') select(0, true);
+        else if (k === 'End') select(n - 1, true);
+        else return;
+        e.preventDefault();
+      });
+    });
+    select(0);
+  });
+})();
+</script>
 </body>
 </html>
