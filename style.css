@@ -202,7 +202,10 @@ details.projects summary small{font:400 13.5px var(--sans);color:var(--muted);ma
 .sim-body h3{font-size:21px;margin-bottom:6px}
 .sim-body p{font-size:15px;color:var(--ink-soft);margin:0 0 12px}
 .sim-body .go{font-size:14px;font-weight:500;color:var(--link)}
-@media (max-width:760px){.sim-grid{grid-template-columns:1fr}.sim-play{opacity:1}}
+.sim-card.wide{grid-column:1/-1;flex-direction:row}
+.sim-card.wide .sim-shot{flex:0 0 52%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--line)}
+.sim-card.wide .sim-body{align-self:center}
+@media (max-width:760px){.sim-grid{grid-template-columns:1fr}.sim-play{opacity:1}.sim-card.wide{flex-direction:column}.sim-card.wide .sim-shot{aspect-ratio:16/10;border-right:0;border-bottom:1px solid var(--line)}}
 
 /* ---------- Publications ---------- */
 .pub-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-bottom:8px}
