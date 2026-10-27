@@ -58,7 +58,7 @@
 .quick-icon svg{width:1.4rem;height:1.4rem;fill:#fff}
 .quick-title{display:block;font-weight:700;font-size:1.05rem;line-height:1.2}
 .quick-sub{display:block;font-size:.85rem;opacity:.85;margin-top:.15rem}
-#lectures,#materials{scroll-margin-top:1.5rem}
+#lectures,#materials,#labs{scroll-margin-top:1.5rem}
 #lectures .video-card,#materials .tabs{border-left:4px solid #13294b}
 #materials .tabs{padding-left:1rem}
 .aside .back{display:inline-block;margin-top:.5rem}
@@ -137,6 +137,17 @@
         </div>
       </div>
 
+      <div class="course-block" id="labs">
+        <h2>Interactive Labs</h2>
+        <p>Browser-based tools for practising the course material. Click a lab to open it in a new tab.</p>
+        <div class="sim-grid">
+      <a class="sim-card wide" href="https://qaralleh-esam.github.io/Digital-Logic-Design/kmap-lab.html" target="_blank" rel="noopener" aria-label="Open the K-Map Lab in a new tab">
+        <span class="sim-shot"><img src="images/kmap-lab.jpg" alt="Screenshot of the K-Map Lab showing a 4-variable Karnaugh map with grouped prime implicants" width="960" height="540" loading="lazy"><span class="sim-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Launch lab</span></span>
+        <span class="sim-body"><span class="sim-chip">2–4 variables · SOP &amp; POS · graded practice</span><h3>K-Map Lab</h3><p>Simplify functions on a Karnaugh map step by step: Gray-code adjacency, prime implicants, essential prime implicants and the minimal cover. Then practise: draw your own groups and get instant feedback on validity, primality and minimality.</p><span class="go">Open in a new tab &#8599;</span></span>
+      </a>
+        </div>
+      </div>
+
       <div class="course-block" id="materials">
         <h2>Course Materials</h2>
         <p>Course materials are hosted on Google Drive and open in a new tab. Browse the
@@ -212,6 +223,10 @@
       <a class="quick" href="#materials">
         <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></span>
         <span><span class="quick-title">Course Material</span><span class="quick-sub">Slides, workbooks and past papers</span></span>
+      </a>
+      <a class="quick" href="#labs">
+        <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z" fill="none" stroke="#fff" stroke-width="2"/></svg></span>
+        <span><span class="quick-title">Interactive Labs</span><span class="quick-sub">K-Map Lab: learn and practise</span></span>
       </a>
       <a class="back" href="courses.html">&larr; All courses</a>
     </aside>
