@@ -147,7 +147,7 @@
 
       <div class="course-block" id="simulators">
         <h2>Interactive Simulation Labs</h2>
-        <p>Browser-based PIC simulators: write assembly, run or single-step it, and watch the registers, breadboard LEDs, 7-segment display, timer and interrupts update live. The I/O Pin Lab zooms in on the hardware behind one port pin, and the Power-Up Reset Lab shows why the PIC must be held in reset at switch-on. Click a lab to open it in a new tab.</p>
+        <p>Browser-based PIC simulators: write assembly, run or single-step it, and watch the registers, breadboard LEDs, 7-segment display, timer and interrupts update live. The I/O Pin Lab zooms in on the hardware behind one port pin, the Power-Up Reset Lab shows why the PIC must be held in reset at switch-on, and the IDE Simulator recreates an MPLAB-style debugging session with machine code, registers, RAM and the stack. Click a lab to open it in a new tab.</p>
         <div class="sim-grid">
       <a class="sim-card" href="https://qaralleh-esam.github.io/Embedded-Systems-/PIC16F84A_Simulation_Lab.html" target="_blank" rel="noopener" aria-label="Open the PIC16F84A Simulation Lab in a new tab">
         <span class="sim-shot"><img src="images/pic16f84a-simulation-lab.jpg" alt="Screenshot of the PIC16F84A Simulation Lab" width="960" height="600" loading="lazy"><span class="sim-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Launch simulator</span></span>
@@ -164,6 +164,10 @@
       <a class="sim-card wide" href="https://qaralleh-esam.github.io/Embedded-Systems-/PIC16F84A_Power_Up_Reset_Lab.html" target="_blank" rel="noopener" aria-label="Open the PIC16F84A Power-Up Reset Lab in a new tab">
         <span class="sim-shot"><img src="images/pic16f84a-power-up-reset-lab.jpg" alt="Screenshot of the Power-Up Reset Lab showing VDD, MCLR and oscillator traces after switch-on" width="960" height="621" loading="lazy"><span class="sim-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Launch lab</span></span>
         <span class="sim-body"><span class="sim-chip">POR · PWRTE · OST · MCLR RC</span><h3>PIC16F84A Power-Up Reset Lab</h3><p>Watch the first milliseconds after switch-on: VDD ramping up and the crystal starting. See how the internal POR, the 72 ms power-up timer, the oscillator start-up timer and the external R-C (with diode and Rs) on MCLR keep the PIC in reset until conditions are healthy.</p><span class="go">Open in a new tab &#8599;</span></span>
+      </a>
+      <a class="sim-card wide" href="https://qaralleh-esam.github.io/Embedded-Systems-/PIC16F84A_IDE_Simulator.html" target="_blank" rel="noopener" aria-label="Open the PIC16F84A IDE Simulator in a new tab">
+        <span class="sim-shot"><img src="images/pic16f84a-ide-simulator.jpg" alt="Screenshot of the PIC IDE Simulator showing the editor, disassembly listing, special function registers, file registers and hardware stack" width="960" height="621" loading="lazy"><span class="sim-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Launch lab</span></span>
+        <span class="sim-body"><span class="sim-chip">MPLAB-style debugger · machine code · stack</span><h3>PIC16F84A IDE Simulator</h3><p>An MPLAB-style debugger in the browser. Write assembly in the editor, build it, and step through the program while the disassembly listing shows each instruction's 14-bit machine code. Watch the Special Function Registers, File Registers (RAM) and the 8-level hardware stack update, with breakpoints, Step Over/Out and a cycle stopwatch.</p><span class="go">Open in a new tab &#8599;</span></span>
       </a>
     </div>
         <p style="font-size:13.5px;color:var(--muted);margin-top:14px">Source code: <a href="https://github.com/Qaralleh-Esam/Embedded-Systems-" target="_blank" rel="noopener">Qaralleh-Esam/Embedded-Systems-</a> on GitHub.</p>
